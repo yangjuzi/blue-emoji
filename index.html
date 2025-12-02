@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blue Emoji — blue-emoji.com</title>
+  <meta name="description" content="浏览并复制各种蓝色主题 emoji — 蓝色圆圈、蓝鲸、蓝心等。支持搜索、预览与导出 PNG。" />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#2b6df6;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --gap:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, #061028 0%, #07111e 100%);
+      color: #e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:20px;
+    }
+    .logo{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      background:var(--glass);
+      padding:10px 14px;
+      border-radius:12px;
+      box-shadow: 0 6px 18px rgba(11,18,32,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+    .logo .dot{
+      width:36px;height:36px;border-radius:10px;
+      display:grid;place-items:center;font-weight:700;background: linear-gradient(180deg,#2b6df6,#1e4dd8);
+      box-shadow:0 6px 18px rgba(43,109,246,0.18);
+    }
+    h1{font-size:20px;margin:0}
+    p.subtitle{margin:0;color:var(--muted);font-size:13px}
+
+    .controls{
+      margin-left:auto;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .search{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(255,255,255,0.03);
+      padding:8px 10px;border-radius:10px;
+    }
+    .search input{
+      background:transparent;border:0;color:inherit;outline:none;width:220px;font-size:14px;
+    }
+    .tagbar{margin:18px 0;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{
+      background:rgba(255,255,255,0.02);
+      padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);
+      cursor:pointer;font-size:13px;color:var(--muted);
+    }
+    .tag.active{background:linear-gradient(90deg,#254edb,#3a83ff); color:white; box-shadow:0 6px 18px rgba(58,131,255,0.15)}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px,1fr));
+      gap:var(--gap);
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px;align-items:center;
+      transition:transform .14s ease, box-shadow .14s ease; cursor:pointer;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .card:focus, .card:hover{ transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,0.5) }
+    .emo{
+      width:64px;height:64px;border-radius:14px;display:grid;place-items:center;font-size:36px;
+      background: linear-gradient(180deg,#eaf2ff00,#eaf6ff05); /* subtle */
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+    .name{ font-size:13px;color:var(--muted); text-align:center; padding:0 6px }
+    .small{font-size:12px;color:var(--muted)}
+
+    /* preview modal */
+    .modal-backdrop{
+      position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.8));z-index:60;
+    }
+    .modal{
+      width:min(760px,94%); background:linear-gradient(180deg,#071327,#071427); padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 20px 60px rgba(2,6,23,0.7);
+      display:flex;gap:20px;align-items:center;
+    }
+    .preview-emo{ width:180px;height:180px;border-radius:18px;display:grid;place-items:center;font-size:110px;background:linear-gradient(180deg,#eaf2ff08,#dbe9ff07)}
+    .modal .meta{flex:1}
+    .actions{display:flex;gap:10px;margin-top:12px}
+    .btn{
+      padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;background:rgba(255,255,255,0.03);color:inherit;
+    }
+    .btn.primary{background:linear-gradient(90deg,#2b6df6,#1e4dd8);color:white;box-shadow:0 8px 30px rgba(43,109,246,0.18)}
+    .small-muted{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:640px){
+      .logo h1{font-size:16px}
+      .search input{width:120px}
+      .modal{flex-direction:column; padding:16px}
+      .preview-emo{width:140px;height:140px;font-size:86px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" aria-hidden="true">
+      <div class="dot">BE</div>
+      <div>
+        <h1>Blue Emoji</h1>
+        <p class="subtitle">浏览、复制并导出蓝色主题 Emoji — blue-emoji.com</p>
+      </div>
+    </div>
+
+    <div class="controls" role="search" aria-label="Search emojis">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"/></svg>
+        <input id="q" type="search" placeholder="搜索 emoji 名称 / 标签（例如 whale, heart）" />
+      </div>
+    </div>
+  </header>
+
+  <div class="tagbar" id="tags" aria-label="标签过滤">
+    <!-- 动态插入 tag -->
+  </div>
+
+  <main>
+    <div class="grid" id="grid" role="list" aria-live="polite">
+      <!-- 动态插入 emoji 卡片 -->
+    </div>
+  </main>
+
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <div class="preview-emo" id="previewChar" aria-hidden="true">🔵</div>
+      <div class="meta">
+        <div style="display:flex;align-items:center;gap:12px">
+          <h2 id="previewName" style="margin:0;font-size:18px">Blue Circle</h2>
+          <div class="small-muted" id="previewTags">symbol</div>
+        </div>
+        <p class="small-muted" id="previewCode">字符: <code id="previewCodeVal">🔵</code></p>
+
+        <div class="actions">
+          <button class="btn primary" id="copyBtn">复制到剪贴板</button>
+          <button class="btn" id="downloadBtn">导出 PNG</button>
+          <button class="btn" id="closeBtn">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    由 blue-emoji.com 提供 · 点击任意卡片预览并复制
+  </footer>
+
+  <script>
+    // 数据：每项包含字符、名称和标签
+    const EMOJIS = [
+      {ch: "🔵", name:"Blue Circle", tags:["symbol"]},
+      {ch: "💙", name:"Blue Heart", tags:["symbol","heart"]},
+      {ch: "🐳", name:"Spouting Whale", tags:["animal","sea","whale"]},
+      {ch: "🐬", name:"Dolphin", tags:["animal","sea","dolphin"]},
+      {ch: "🌀", name:"Cyclone", tags:["symbol","weather"]},
+      {ch: "🧿", name:"Nazar Amulet", tags:["symbol","amulet"]},
+      {ch: "🔷", name:"Large Blue Diamond", tags:["shape","symbol"]},
+      {ch: "🔹", name:"Small Blue Diamond", tags:["shape","symbol"]},
+      {ch: "🫧", name:"Bubbles", tags:["water","sea","symbol"]},
+      {ch: "📘", name:"Blue Book", tags:["object","book"]},
+      {ch: "🎽", name:"Running Shirt (often blue)", tags:["object","sport"]},
+      {ch: "🧢", name:"Baseball Cap", tags:["object","clothing"]},
+      {ch: "🦋", name:"Butterfly (often blue variants)", tags:["animal","insect"]},
+      {ch: "🧊", name:"Ice Cube", tags:["object","cold"]},
+      {ch: "🏐", name:"Volleyball (often blue/white)", tags:["sport","ball"]},
+      {ch: "🌐", name:"Globe with Meridians", tags:["symbol","planet"]},
+      {ch: "🛟", name:"Ring Buoy", tags:["object","sea","safety"]},
+      {ch: "👖", name:"Jeans", tags:["clothing","object"]},
+    ];
+
+    const grid = document.getElementById('grid');
+    const tagsEl = document.getElementById('tags');
+    const qInput = document.getElementById('q');
+
+    // compute unique tags
+    const tagSet = new Set();
+    EMOJIS.forEach(e => e.tags.forEach(t => tagSet.add(t)));
+    const TAGS = ['all', ...Array.from(tagSet).sort()];
+
+    // render tags
+    let activeTag = 'all';
+    function renderTags(){
+      tagsEl.innerHTML = '';
+      TAGS.forEach(t=>{
+        const btn = document.createElement('button');
+        btn.className = 'tag' + (t===activeTag ? ' active' : '');
+        btn.textContent = t==='all' ? 'All' : t;
+        btn.addEventListener('click', ()=>{ activeTag = t; renderTags(); renderGrid(); });
+        tagsEl.appendChild(btn);
+      });
+    }
+
+    // render grid based on search & tag
+    function renderGrid(){
+      const q = qInput.value.trim().toLowerCase();
+      grid.innerHTML = '';
+      const filtered = EMOJIS.filter(e=>{
+        if(activeTag !== 'all' && !e.tags.includes(activeTag)) return false;
+        if(!q) return true;
+        return e.name.toLowerCase().includes(q) || e.tags.join(' ').includes(q) || e.ch.includes(q);
+      });
+
+      if(filtered.length === 0){
+        grid.innerHTML = '<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--muted)">未找到匹配的 emoji</div>';
+        return;
+      }
+
+      filtered.forEach((e, idx)=>{
+        const card = document.createElement('button');
+        card.className = 'card';
+        card.setAttribute('role','listitem');
+        card.setAttribute('aria-label', `${e.name} — 点击查看`);
+        card.innerHTML = `
+          <div class="emo" aria-hidden="true">${e.ch}</div>
+          <div class="name">${e.name}</div>
+          <div class="small">${e.tags.join(', ')}</div>
+        `;
+        card.addEventListener('click', ()=>openPreview(e));
+        grid.appendChild(card);
+      });
+    }
+
+    // preview modal
+    const modal = document.getElementById('modal');
+    const previewChar = document.getElementById('previewChar');
+    const previewName = document.getElementById('previewName');
+    const previewTags = document.getElementById('previewTags');
+    const previewCodeVal = document.getElementById('previewCodeVal');
+    const copyBtn = document.getElementById('copyBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const closeBtn = document.getElementById('closeBtn');
+
+    let current = null;
+
+    function openPreview(e){
+      current = e;
+      previewChar.textContent = e.ch;
+      previewName.textContent = e.name;
+      previewTags.textContent = e.tags.join(', ');
+      previewCodeVal.textContent = e.ch;
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden','false');
+      copyBtn.focus();
+    }
+    function closePreview(){
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden','true');
+      current = null;
+    }
+
+    // copy to clipboard
+    copyBtn.addEventListener('click', async ()=>{
+      if(!current) return;
+      try{
+        await navigator.clipboard.writeText(current.ch);
+        copyBtn.textContent = '已复制 ✓';
+        setTimeout(()=>copyBtn.textContent = '复制到剪贴板',1200);
+      }catch(err){
+        copyBtn.textContent = '复制失败';
+        setTimeout(()=>copyBtn.textContent = '复制到剪贴板',1200);
+      }
+    });
+
+    // download PNG: render emoji to canvas then download
+    downloadBtn.addEventListener('click', ()=>{
+      if(!current) return;
+      const scale = 4;
+      const size = 512;
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+
+      // background: subtle rounded blue
+      ctx.fillStyle = '#071427';
+      ctx.fillRect(0,0,size,size);
+
+      // draw rounded rect
+      const r = 40;
+      roundRect(ctx, 20, 20, size-40, size-40, r);
+      ctx.fillStyle = '#0f2138';
+      ctx.fill();
+
+      // emoji text (center)
+      // pick large font — system emoji font will be used
+      ctx.font = `${size * 0.5}px serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = '#dfeeff';
+      ctx.fillText(current.ch, size/2, size/2 + 10);
+
+      // caption
+      ctx.font = `${size * 0.06}px sans-serif`;
+      ctx.fillStyle = '#9fb8ff';
+      ctx.fillText(current.name, size/2, size - 40);
+
+      // download
+      const dataUrl = canvas.toDataURL('image/png');
+      const a = document.createElement('a');
+      a.href = dataUrl;
+      const safeName = current.name.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9\-]/g,'');
+      a.download = `${safeName}.png`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    });
+
+    function roundRect(ctx, x, y, w, h, r){
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r);
+      ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r);
+      ctx.arcTo(x, y, x + w, y, r);
+      ctx.closePath();
+    }
+
+    // close handlers
+    closeBtn.addEventListener('click', closePreview);
+    modal.addEventListener('click', (ev)=>{
+      if(ev.target === modal) closePreview();
+    });
+    document.addEventListener('keydown', (ev)=>{
+      if(ev.key === 'Escape') closePreview();
+    });
+
+    // search debounce
+    let t = null;
+    qInput.addEventListener('input', ()=>{
+      clearTimeout(t);
+      t = setTimeout(renderGrid, 160);
+    });
+
+    // initial render
+    renderTags();
+    renderGrid();
+
+    // accessibility: focus trap minimal: when modal opens, pressing Tab stays within modal
+    document.addEventListener('focusin', (ev)=>{
+      if(modal.style.display === 'flex' && !modal.contains(ev.target)){
+        ev.preventDefault();
+        copyBtn.focus();
+      }
+    });
+  </script>
+</body>
+</html>
