@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueEmoji.com - Explore Blue Emojis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .emoji-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .emoji-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.2), 0 4px 6px -2px rgba(0, 123, 255, 0.1);
+        }
+        /* Style for custom message box instead of alert() */
+        #messageBox {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 50;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #messageBox.show {
+            opacity: 1;
+        }
+
+        /* Custom style for the compact category list */
+        .category-link {
+            transition: color 0.1s, background-color 0.1s;
+            border-radius: 9999px; /* Full rounded pill */
+            padding: 4px 12px;
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* medium */
+            color: #4b5563; /* gray-600 */
+        }
+        .category-link:hover {
+            color: #2563eb; /* blue-600 */
+            background-color: #eff6ff; /* blue-50 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Custom Message Box for notifications (instead of alert) -->
+    <div id="messageBox" class="bg-green-500 text-white"></div>
+
+    <!-- Core JavaScript for interactivity (No Firebase/Auth needed) -->
+    <script>
+        // Function to show custom notification message
+        window.showMessage = function(text, type = 'success') {
+            const box = document.getElementById('messageBox');
+            box.textContent = text;
+            
+            box.classList.remove('bg-green-500', 'bg-red-500', 'bg-blue-500');
+            if (type === 'success') {
+                box.classList.add('bg-green-500');
+            } else if (type === 'error') {
+                 box.classList.add('bg-red-500');
+            } else {
+                 box.classList.add('bg-blue-500'); // Use blue for info
+            }
+
+            box.classList.add('show');
+            setTimeout(() => {
+                box.classList.remove('show');
+            }, 3000);
+        }
+
+        // Placeholder search function 
+        window.handleSearch = function(event) {
+            event.preventDefault();
+            const query = document.getElementById('search-input').value.trim();
+            if (query) {
+                showMessage(`Searching for: "${query}"... (Feature coming soon!)`, 'info');
+            } else {
+                showMessage("Please enter a search term.", 'error');
+            }
+        }
+
+        // Function to simulate navigation to detail page
+        window.goToDetail = function(emojiId) {
+            if (emojiId === 'blue_heart') {
+                // Only the Blue Heart links to a real detail page (for demonstration)
+                window.location.href = 'emoji-detail.html';
+            } else {
+                showMessage(`Details for ${emojiId} are not yet available.`, 'info');
+            }
+        }
+    </script>
+    
+    <!-- Navigation Bar -->
+    <header class="shadow-md bg-white sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- 更改了 logo text 为 BLUE EMOJI -->
+            <a href="index.html" class="text-3xl font-black text-blue-600 tracking-tight">BLUE EMOJI</a>
+            
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <!-- HOME - Currently Active -->
+                <a href="index.html" class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1">HOME</a>
+
+                <!-- CATEGORY Dropdown (9 core categories) -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 transition flex items-center py-2">
+                        Category <i class="fas fa-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute hidden group-hover:block top-full left-1/2 -translate-x-1/2 mt-0 w-48 bg-white rounded-xl shadow-2xl z-20 overflow-hidden ring-1 ring-blue-100 transform origin-top transition duration-200">
+                        <!-- All 9 Core Categories (Dropdown) -->
+                        <a href="category-smileys-emotion.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Smileys Emotion</a>
+                        <a href="category-people.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">People</a>
+                        <a href="category-animals-nature.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Animals & Nature</a>
+                        <a href="category-food-drink.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Food & Drink</a>
+                        <a href="category-activities.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Activities</a>
+                        <a href="category-travel-places.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Travel & Places</a>
+                        <a href="category-objects.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Objects</a>
+                        <a href="category-symbols.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Symbols</a>
+                        <a href="category-flags.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Flags</a>
+                        
+                        <div class="border-t border-gray-100"></div>
+                        <a href="category-all.html" class="block px-4 py-2 bg-gray-50 text-blue-600 hover:bg-blue-100 transition font-semibold">View All Categories...</a>
+                    </div>
+                </div>
+
+                <!-- DOWNLOAD -->
+                <a href="download.html" class="text-gray-600 hover:text-blue-600 transition">Download</a>
+                
+                <!-- ABOUT -->
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+            </nav>
+            <button class="md:hidden text-gray-600 hover:text-blue-600 p-2 rounded-lg">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Hero Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">
+                <span class="text-blue-600">Blue</span>Emoji.com
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                The definitive library of open-source emojis, colored for calm, loyalty, and serenity.
+            </p>
+
+            <!-- Search Bar -->
+            <form onsubmit="handleSearch(event)" class="max-w-xl mx-auto">
+                <div class="flex rounded-xl shadow-lg border border-blue-200 overflow-hidden">
+                    <input 
+                        type="text" 
+                        id="search-input"
+                        placeholder="Search for hearts, waves, circles, or faces..." 
+                        class="w-full p-4 text-lg border-none focus:ring-0 focus:outline-none"
+                    />
+                    <button type="submit" class="bg-blue-600 text-white px-6 hover:bg-blue-700 transition duration-150">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Quick Categories Links (Below Search, No Icons/Borders) -->
+        <section class="mb-12 border-b border-gray-200 pb-6">
+            <h2 class="sr-only">Quick Categories</h2>
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4">
+                <a href="category-smileys-emotion.html" class="category-link">Smileys Emotion</a>
+                <a href="category-people.html" class="category-link">People</a>
+                <a href="category-animals-nature.html" class="category-link">Animals & Nature</a>
+                <a href="category-food-drink.html" class="category-link">Food & Drink</a>
+                <a href="category-activities.html" class="category-link">Activities</a>
+                <a href="category-travel-places.html" class="category-link">Travel & Places</a>
+                <a href="category-objects.html" class="category-link">Objects</a>
+                <a href="category-symbols.html" class="category-link">Symbols</a>
+                <a href="category-flags.html" class="category-link">Flags</a>
+            </div>
+        </section>
+
+        <!-- Featured/New Emojis Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-3 flex items-center">
+                <i class="fas fa-star text-yellow-500 mr-3"></i> All Blue Emojis
+            </h2>
+            
+            <!-- Emoji Grid -->
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-3 sm:gap-4">
+                
+                <!-- Emoji Card 1: Blue Heart (Links to detail page) -->
+                <div onclick="goToDetail('blue_heart')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md hover:ring-4 ring-blue-400">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">💙</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Blue Heart</p>
+                </div>
+                
+                <!-- Emoji Card 2: Blue Circle -->
+                <div onclick="goToDetail('blue_circle')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🔵</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Blue Circle</p>
+                </div>
+
+                <!-- Emoji Card 3: Water Wave -->
+                <div onclick="goToDetail('water_wave')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🌊</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Water Wave</p>
+                </div>
+
+                <!-- Emoji Card 4: Droplet -->
+                <div onclick="goToDetail('droplet')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">💧</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Droplet</p>
+                </div>
+
+                <!-- Emoji Card 5: Blue Book -->
+                <div onclick="goToDetail('blue_book')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">📘</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Blue Book</p>
+                </div>
+
+                <!-- Emoji Card 6: Man Dancing (Blue Shirt) -->
+                <div onclick="goToDetail('man_dancing')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🕺</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Man Dancing</p>
+                </div>
+
+                <!-- Emoji Card 7: Blue Diamond -->
+                <div onclick="goToDetail('diamond')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">💎</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Gem Stone</p>
+                </div>
+                
+                <!-- Emoji Card 8: Cloud with Rain -->
+                <div onclick="goToDetail('cloud_rain')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🌧️</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Cloud w/ Rain</p>
+                </div>
+
+                <!-- Emoji Card 9: Zzz -->
+                <div onclick="goToDetail('zzz')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">💤</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Zzz</p>
+                </div>
+                
+                <!-- Emoji Card 10: Japanese Post Office -->
+                <div onclick="goToDetail('post_office')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🏣</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Post Office</p>
+                </div>
+
+                <!-- Placeholder Card 11: Whale -->
+                <div onclick="goToDetail('whale')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🐋</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Whale</p>
+                </div>
+
+                <!-- Placeholder Card 12: Fish -->
+                <div onclick="goToDetail('fish')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🐟</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Fish</p>
+                </div>
+                
+                <!-- Placeholder Card 13: Billed Cap -->
+                <div onclick="goToDetail('cap')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🧢</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Billed Cap</p>
+                </div>
+                
+                <!-- Placeholder Card 14: T-Shirt -->
+                <div onclick="goToDetail('tshirt')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">👕</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">T-Shirt</p>
+                </div>
+
+                <!-- Placeholder Card 15: Cold Face -->
+                <div onclick="goToDetail('cold_face')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🥶</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Cold Face</p>
+                </div>
+                
+                <!-- Placeholder Card 16: Genie -->
+                <div onclick="goToDetail('genie')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🧞</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Genie</p>
+                </div>
+                
+                <!-- Placeholder Card 17: Nazar Amulet -->
+                <div onclick="goToDetail('nazar_amulet')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🧿</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Nazar Amulet</p>
+                </div>
+
+                <!-- Placeholder Card 18: Blue Square -->
+                <div onclick="goToDetail('blue_square')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🟦</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Blue Square</p>
+                </div>
+
+                <!-- Placeholder Card 19: Large Blue Diamond -->
+                <div onclick="goToDetail('large_diamond')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">🔷</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Large Blue Diamond</p>
+                </div>
+
+                <!-- Placeholder Card 20: Sweat Droplets -->
+                <div onclick="goToDetail('sweat_droplets')" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-md">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-100 rounded-lg transition duration-300 hover:scale-110">
+                        <span class="text-blue-600">💦</span>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center truncate w-full">Sweat Droplets</p>
+                </div>
+
+            </div>
+            
+            <!-- Removed the "View All 150+ Blue Emojis" button here -->
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-4">
+                © 2025 BlueEmoji.com. All Rights Reserved.
+            </p>
+            <!-- License Requirement: CC BY-SA 4.0 Statement -->
+            <p class="text-xs text-gray-400">
+                Emoji graphics based on <a href="https://openmoji.org/" class="underline hover:text-blue-400">OpenMoji</a> – the open-source emoji library.
+            </p>
+            <p class="text-xs text-gray-400">
+                Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="underline hover:text-blue-400">CC BY-SA 4.0</a>. Blue edition files are available for download.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

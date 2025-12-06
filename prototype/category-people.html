@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Blue Emojis | blue-emoji.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .emoji-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .emoji-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px -2px rgba(0, 123, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar (Unified with emoji-detail.html) -->
+    <header class="shadow-sm bg-white sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-blue-600 tracking-tight">BlueEmoji.com</a>
+            
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <!-- HOME -->
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">HOME</a>
+
+                <!-- CATEGORY Dropdown (Active link for People) -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 transition flex items-center py-2">
+                        Category <i class="fas fa-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute hidden group-hover:block top-full left-1/2 -translate-x-1/2 mt-0 w-48 bg-white rounded-xl shadow-2xl z-20 overflow-hidden ring-1 ring-blue-100 transform origin-top transition duration-200">
+                        <!-- All 9 Core Categories -->
+                        <a href="category-smileys-emotion.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Smileys & Emotion</a>
+                        <a href="category-people.html" class="block px-4 py-2 text-blue-600 font-bold bg-blue-50 hover:bg-blue-100 transition">People</a>
+                        <a href="category-animals-nature.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Animals & Nature</a>
+                        <a href="category-food-drink.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Food & Drink</a>
+                        <a href="category-activities.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Activities</a>
+                        <a href="category-travel-places.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Travel & Places</a>
+                        <a href="category-objects.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Objects</a>
+                        <a href="category-symbols.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Symbols</a>
+                        <a href="category-flags.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Flags</a>
+                        
+                        <div class="border-t border-gray-100"></div>
+                        <a href="category-all.html" class="block px-4 py-2 bg-gray-50 text-blue-600 hover:bg-blue-100 transition font-semibold">View All Categories...</a>
+                    </div>
+                </div>
+
+                <!-- DOWNLOAD -->
+                <a href="download.html" class="text-gray-600 hover:text-blue-600 transition">Download</a>
+                
+                <!-- ABOUT -->
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+            </nav>
+            <button class="md:hidden text-gray-600 hover:text-blue-600 p-2 rounded-lg">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Breadcrumbs (Revised for clearer hierarchy: Home / Category / People) -->
+        <nav class="text-sm font-medium text-gray-500 mb-6">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <span class="mx-2">/</span>
+            <!-- Added Category link -->
+            <a href="category-all.html" class="hover:text-blue-600">Category</a>
+            <span class="mx-2">/</span>
+            <!-- Current page: not a link, bolder text color -->
+            <span class="font-semibold text-gray-900">People</span>
+        </nav>
+
+        <!-- Title and Description (Updated to match color and thickness) -->
+        <div class="mb-8 border-b pb-4">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-2">
+                People <span class="text-gray-900 font-extrabold text-3xl">Category</span>
+            </h1>
+            <p class="text-lg text-gray-600">
+                A comprehensive collection of Blue Emojis representing people, body parts, gestures, and facial expressions.
+            </p>
+        </div>
+
+        <!-- Emoji Grid List -->
+        <section>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 sm:gap-6">
+                
+                <!-- Emoji Card 1 (Raising Hands) -->
+                <a href="emoji-raising-hands.html" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <!-- Blue Emoji Placeholder -->
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">🙌</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Raising Hands</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+
+                <!-- Emoji Card 2 (Smiling Face with Heart-Eyes) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">😍</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Heart Eyes</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+                
+                <!-- Emoji Card 3 (Face Exhaling) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">😮‍💨</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Face Exhaling</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+
+                <!-- Emoji Card 4 (Person Waving) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">👋</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Waving Hand</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+
+                <!-- Placeholder Card (Person Walking) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">🚶</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Person Walking</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+                
+                <!-- Placeholder Card (Smiling Angel) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">😇</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Smiling Angel</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+                
+                <!-- Placeholder Card (Man Code) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">👨‍💻</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Man Code</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+                
+                <!-- Placeholder Card (Baby) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">👶</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Baby</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+                
+                <!-- Placeholder Card (People Holding Hands) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">🧑‍🤝‍🧑</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">People Holding Hands</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+                
+                <!-- Placeholder Card (Partying Face) -->
+                <a href="#" class="emoji-card flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-4xl sm:text-5xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">🥳</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-semibold text-gray-800 text-center w-full truncate">Partying Face</p>
+                    <!-- Removed Chinese subtitle -->
+                </a>
+                <!-- ... more cards -->
+            </div>
+            
+            <!-- Pagination Placeholder -->
+            <div class="flex justify-center mt-10">
+                <button class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">Load More (Page 2)</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-4">
+                © 2025 BlueEmoji.com.
+            </p>
+            <p class="text-xs text-gray-400">
+                Emoji graphics based on <a href="https://openmoji.org/" class="underline hover:text-blue-400">OpenMoji</a>. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="underline hover:text-blue-400">CC BY-SA 4.0</a>.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

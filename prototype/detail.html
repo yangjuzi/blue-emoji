@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💙 Blue Heart Details | BlueEmoji.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .emoji-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .emoji-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.2), 0 4px 6px -2px rgba(0, 123, 255, 0.1);
+        }
+        /* Style for custom message box instead of alert() */
+        #messageBox {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 50;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #messageBox.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Custom Message Box for notifications (instead of alert) -->
+    <div id="messageBox" class="bg-green-500 text-white"></div>
+
+    <!-- Firebase Imports -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, addDoc, onSnapshot, collection, query, orderBy, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Set Firebase Log Level for debugging (optional)
+        setLogLevel('error'); // Reduced to error level for production feel
+
+        // --- GLOBAL VARIABLES (Provided by Canvas) ---
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        
+        // --- FIREBASE INITIALIZATION ---
+        let db, auth;
+        const EMOJI_ID = 'blue_heart'; // Unique ID for this emoji page
+
+        if (firebaseConfig.apiKey) {
+            const app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            auth = getAuth(app);
+        } else {
+            console.error("Firebase config is missing. Comments feature will be unavailable.");
+        }
+
+        let userId = null;
+        let authReady = false;
+        
+        // --- AUTHENTICATION & INITIALIZATION ---
+        async function authenticateAndInitialize() {
+            if (!auth) return;
+
+            try {
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Firebase Auth failed:", error);
+            }
+        }
+
+        // Wait for auth state change to get the final user ID
+        if (auth) {
+             onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    userId = user.uid;
+                    authReady = true;
+                    console.log("Authenticated User ID:", userId);
+                    // Start listening to comments once authenticated
+                    listenForComments();
+                } else {
+                    // This handles anonymous users if token is not provided
+                    authReady = true;
+                    // For unauthenticated access, we might still proceed if public rules allow read/write,
+                    // but we'll use a placeholder or anonymous ID if needed.
+                    userId = crypto.randomUUID(); // Fallback for userId if needed for non-auth ops
+                    console.log("Anonymous/Fallback User ID:", userId);
+                    listenForComments();
+                }
+            });
+            authenticateAndInitialize();
+        }
+
+
+        // --- FIREBASE COMMENT LOGIC ---
+        
+        // Use a public collection path filtered by emoji ID for a scalable solution
+        const getCommentsCollectionRef = () => {
+            if (!db) return null;
+            // Path: /artifacts/{appId}/public/data/emoji_comments
+            return collection(db, `artifacts/${appId}/public/data/emoji_comments`);
+        };
+
+        const commentsListEl = document.getElementById('comments-list');
+        const commentFormEl = document.getElementById('comment-form');
+        const commentInputEl = document.getElementById('comment-text');
+        const commentStatusEl = document.getElementById('comment-status');
+
+
+        function listenForComments() {
+            if (!authReady || !db) return;
+
+            // Query for comments specific to this emoji, ordered by time
+            const commentsRef = getCommentsCollectionRef();
+            const q = query(
+                commentsRef,
+                // In a real app, we'd use 'where("emojiId", "==", EMOJI_ID)' but since this is a single page immersive,
+                // we'll fetch all and filter client side if required, or simply assume the collection is only for this emoji's comments.
+                // For simplicity and to avoid index errors, we'll order by timestamp.
+                orderBy('timestamp', 'desc')
+            );
+            
+            commentStatusEl.textContent = 'Loading comments...';
+            commentStatusEl.classList.remove('text-red-500');
+            
+            // Set up real-time listener
+            onSnapshot(q, (snapshot) => {
+                let commentsHtml = '';
+                if (snapshot.empty) {
+                    commentStatusEl.textContent = 'No comments yet. Be the first!';
+                    commentStatusEl.classList.add('text-gray-500');
+                    return;
+                }
+
+                snapshot.docs.forEach(doc => {
+                    const data = doc.data();
+                    // Basic client-side filtering check (though the collection path should ideally enforce this)
+                    if (data.emojiId !== EMOJI_ID) return; 
+
+                    const date = data.timestamp ? new Date(data.timestamp.seconds * 1000).toLocaleString() : 'Just now';
+                    const displayUserId = data.userId.substring(0, 8) + '...'; // Truncate user ID for display (best practice is to display full ID if it's the only identifier, but UI space is limited)
+
+                    commentsHtml += `
+                        <div class="border-b border-gray-100 p-4 last:border-b-0">
+                            <div class="flex items-center mb-1">
+                                <span class="font-bold text-blue-600 mr-2">${displayUserId}</span>
+                                <span class="text-xs text-gray-500">${date}</span>
+                            </div>
+                            <p class="text-gray-800">${data.text}</p>
+                        </div>
+                    `;
+                });
+
+                commentsListEl.innerHTML = commentsHtml;
+                commentStatusEl.textContent = ''; // Clear status message
+            }, (error) => {
+                console.error("Error listening to comments:", error);
+                commentStatusEl.textContent = 'Error loading comments.';
+                commentStatusEl.classList.add('text-red-500');
+            });
+        }
+
+
+        commentFormEl.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (!authReady) {
+                showMessage("Authentication is not ready. Please wait.", "error");
+                return;
+            }
+            if (!userId) {
+                showMessage("User ID not available. Cannot post comment.", "error");
+                return;
+            }
+
+            const commentText = commentInputEl.value.trim();
+            if (!commentText) {
+                showMessage("Comment cannot be empty.", "error");
+                return;
+            }
+
+            try {
+                const commentsRef = getCommentsCollectionRef();
+                await addDoc(commentsRef, {
+                    emojiId: EMOJI_ID,
+                    userId: userId,
+                    text: commentText,
+                    timestamp: serverTimestamp() // Use server timestamp for reliable sorting
+                });
+
+                commentInputEl.value = ''; // Clear input
+                showMessage("Comment posted successfully!");
+
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                showMessage("Failed to post comment. Check console for details.", "error");
+            }
+        });
+
+
+        // --- NON-FIREBASE JAVASCRIPT FUNCTIONS (Clipboard & Notifications) ---
+
+        // Function to show custom notification message
+        function showMessage(text, type = 'success') {
+            const box = document.getElementById('messageBox');
+            box.textContent = text;
+            
+            box.classList.remove('bg-green-500', 'bg-red-500');
+            if (type === 'success') {
+                box.classList.add('bg-green-500');
+            } else {
+                box.classList.add('bg-red-500');
+            }
+
+            box.classList.add('show');
+            setTimeout(() => {
+                box.classList.remove('show');
+            }, 3000);
+        }
+
+        // Function to copy text to clipboard using document.execCommand
+        window.copyTextToClipboard = function(text, successMessage) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            // Make the textarea invisible
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showMessage(successMessage);
+                } else {
+                    showMessage('Copy failed, please copy manually.', 'error');
+                }
+            } catch (err) {
+                showMessage('Copy failed: ' + err, 'error');
+            }
+
+            document.body.removeChild(textarea);
+        }
+
+        // Action functions for buttons
+        window.copyUnicode = function() {
+            const unicode = document.getElementById('unicode-value').textContent;
+            copyTextToClipboard(unicode, 'Unicode Copied!');
+        }
+
+        window.copyHTML = function() {
+            // This copies the HTML snippet of the giant emoji for embedding
+            // Note: color:#2563eb is the hex for blue-600
+            const html = '<span style="color:#2563eb; font-size:48px;">💙</span>';
+            copyTextToClipboard(html, 'HTML Code Copied!');
+        }
+        
+        window.copyImage = function() {
+            // Placeholder: Not possible to copy image directly
+            showMessage('Please download the SVG or PNG file, or embed using the HTML code.', 'error');
+        }
+
+    </script>
+    
+    <!-- Navigation Bar - HOME, Category, Download, About (Reused from Index) -->
+    <header class="shadow-sm bg-white sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-blue-600 tracking-tight">BlueEmoji.com</a>
+            
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <!-- HOME -->
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">HOME</a>
+
+                <!-- CATEGORY Dropdown (Updated with 9 core categories) -->
+                <div class="relative group">
+                    <button class="text-blue-600 font-bold hover:text-blue-600 transition flex items-center py-2">
+                        Category <i class="fas fa-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute hidden group-hover:block top-full left-1/2 -translate-x-1/2 mt-0 w-48 bg-white rounded-xl shadow-2xl z-20 overflow-hidden ring-1 ring-blue-100 transform origin-top transition duration-200">
+                        <!-- All 9 Core Categories -->
+                        <a href="category-smileys-emotion.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Smileys & Emotion</a>
+                        <a href="category-people.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">People</a>
+                        <a href="category-animals-nature.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Animals & Nature</a>
+                        <a href="category-food-drink.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Food & Drink</a>
+                        <a href="category-activities.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Activities</a>
+                        <a href="category-travel-places.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Travel & Places</a>
+                        <a href="category-objects.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Objects</a>
+                        <a href="category-symbols.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Symbols</a>
+                        <a href="category-flags.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Flags</a>
+                        
+                        <div class="border-t border-gray-100"></div>
+                        <a href="category-all.html" class="block px-4 py-2 bg-gray-50 text-blue-600 hover:bg-blue-100 transition font-semibold">View All Categories...</a>
+                    </div>
+                </div>
+
+                <!-- DOWNLOAD -->
+                <a href="download.html" class="text-gray-600 hover:text-blue-600 transition">Download</a>
+                
+                <!-- ABOUT -->
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+            </nav>
+            <button class="md:hidden text-gray-600 hover:text-blue-600 p-2 rounded-lg">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <!-- Breadcrumbs -->
+        <nav class="text-sm font-medium text-gray-500 mb-6">
+            <a href="index.html" class="hover:text-blue-600">Home</a> / 
+            <a href="category-symbols.html" class="hover:text-blue-600">Symbols</a> / 
+            <span class="text-gray-900">Blue Heart</span>
+        </nav>
+
+        <!-- Detail Section Layout (Flex/Grid for responsiveness) -->
+        <div class="flex flex-col md:flex-row gap-8 bg-white p-6 md:p-10 rounded-xl shadow-xl border border-blue-100">
+            
+            <!-- Left Column: Emoji Display -->
+            <div class="w-full md:w-1/3 flex flex-col items-center justify-center p-8 bg-blue-50 rounded-lg">
+                <div class="text-[120px] md:text-[180px] leading-none text-blue-600 transition duration-500 hover:scale-105" aria-label="Blue Heart Emoji">
+                    💙
+                </div>
+            </div>
+
+            <!-- Right Column: Info and Actions -->
+            <div class="w-full md:w-2/3">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">
+                    Blue Heart
+                </h1>
+                <p class="text-xl text-blue-500 mb-6 font-semibold">
+                    The Blue Heart Emoji
+                </p>
+
+                <!-- NEW: Emoji Meaning/Description -->
+                <div class="mb-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Meaning</h3>
+                    <p class="text-gray-800">
+                        The Blue Heart emoji (💙) represents affection, support, and deep platonic love. 
+                        It is often associated with trust, serenity, and loyalty, or themes related to water, the sea, or the color blue in general. 
+                        It is less commonly used for romantic love than the Red Heart, instead conveying a sense of stability and peace.
+                    </p>
+                </div>
+
+                <!-- Key Details Table -->
+                <div class="space-y-3 mb-8 p-4 bg-gray-50 rounded-lg">
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <span class="font-medium text-gray-700">Category</span>
+                        <a href="category-symbols.html" class="text-blue-600 font-semibold hover:underline">Symbols</a>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <span class="font-medium text-gray-700">Unicode</span>
+                        <code id="unicode-value" class="text-gray-800 bg-gray-200 px-2 py-1 rounded text-sm select-all">U+1F499</code>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium text-gray-700">OpenMoji Name</span>
+                        <span class="text-gray-800">Blue heart</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons: Copy & Download -->
+                <div class="space-y-4">
+                    <h2 class="text-lg font-bold text-gray-700 mb-2">Copy & Download</h2>
+                    
+                    <!-- Copy Buttons -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button onclick="copyUnicode()" class="w-full py-3 px-4 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-150 flex items-center justify-center">
+                            <i class="fas fa-copy mr-2"></i> Copy Unicode (U+1F499)
+                        </button>
+                        <button onclick="copyHTML()" class="w-full py-3 px-4 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-600 transition duration-150 flex items-center justify-center">
+                            <i class="fas fa-code mr-2"></i> Copy HTML Code
+                        </button>
+                    </div>
+
+                    <!-- Download Links -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="/downloads/blue-heart-64px.png" download class="w-full py-3 px-4 bg-gray-700 text-white font-bold rounded-lg shadow-md hover:bg-gray-800 transition duration-150 flex items-center justify-center">
+                            <i class="fas fa-download mr-2"></i> Download PNG (64px)
+                        </a>
+                        <a href="/downloads/blue-heart.svg" download class="w-full py-3 px-4 bg-gray-200 text-gray-800 font-bold rounded-lg shadow-md hover:bg-gray-300 transition duration-150 flex items-center justify-center">
+                            <i class="fas fa-download mr-2"></i> Download SVG
+                        </a>
+                    </div>
+
+                    <!-- Usage/License Note -->
+                    <p class="text-xs text-gray-500 pt-4 border-t mt-4">
+                        <i class="fas fa-info-circle mr-1"></i> You are free to use this emoji. All Blue Emojis are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="underline hover:text-blue-600">CC BY-SA 4.0</a>.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- End Detail Section -->
+        
+        <!-- ============================================== -->
+        <!-- NEW: Comments Section -->
+        <!-- ============================================== -->
+        <section class="mt-12 bg-white p-6 rounded-xl shadow-xl border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-700 mb-6 border-b pb-3">Community Comments</h2>
+
+            <!-- Comment Form -->
+            <form id="comment-form" class="mb-8">
+                <textarea 
+                    id="comment-text" 
+                    rows="4" 
+                    placeholder="Share your thoughts about this blue emoji..." 
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition resize-none"
+                    required
+                ></textarea>
+                <button 
+                    type="submit" 
+                    class="mt-3 py-2 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-150"
+                >
+                    Post Comment
+                </button>
+            </form>
+
+            <!-- Comments List Area -->
+            <div id="comment-status" class="text-center text-gray-500 py-4 italic">
+                Initializing authentication...
+            </div>
+            <div id="comments-list" class="space-y-4 border border-gray-200 rounded-lg max-h-96 overflow-y-auto">
+                <!-- Comments will be injected here by JavaScript/Firestore listener -->
+            </div>
+        </section>
+
+
+        <!-- Related Emojis Section -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-700 mb-6 border-b pb-3">Related Emojis</h2>
+            
+            <!-- Grid for related items -->
+            <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-3 sm:gap-4">
+                
+                <!-- Related Item 1: Red Heart -->
+                <a href="#" class="emoji-card flex flex-col items-center p-2 sm:p-3 bg-white rounded-lg shadow-md hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 text-3xl sm:text-4xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">❤️</span>
+                    </div>
+                    <p class="text-xs font-medium text-gray-700 text-center truncate w-full">Red Heart</p>
+                </a>
+                
+                <!-- Related Item 2: Droplet -->
+                <a href="#" class="emoji-card flex flex-col items-center p-2 sm:p-3 bg-white rounded-lg shadow-md hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 text-3xl sm:text-4xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">💧</span>
+                    </div>
+                    <p class="text-xs font-medium text-gray-700 text-center truncate w-full">Droplet</p>
+                </a>
+                
+                <!-- Related Item 3: Water Wave -->
+                <a href="#" class="emoji-card flex flex-col items-center p-2 sm:p-3 bg-white rounded-lg shadow-md hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 text-3xl sm:text-4xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">🌊</span>
+                    </div>
+                    <p class="text-xs font-medium text-gray-700 text-center truncate w-full">Water Wave</p>
+                </a>
+
+                <!-- Related Item 4: Diamond -->
+                <a href="#" class="emoji-card flex flex-col items-center p-2 sm:p-3 bg-white rounded-lg shadow-md hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 text-3xl sm:text-4xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">💎</span>
+                    </div>
+                    <p class="text-xs font-medium text-gray-700 text-center truncate w-full">Gem Stone</p>
+                </a>
+                
+                <!-- Related Item 5: Symbol - Circle -->
+                <a href="#" class="emoji-card flex flex-col items-center p-2 sm:p-3 bg-white rounded-lg shadow-md hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 text-3xl sm:text-4xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">🔵</span>
+                    </div>
+                    <p class="text-xs font-medium text-gray-700 text-center truncate w-full">Blue Circle</p>
+                </a>
+
+                <!-- Placeholder links for other related items -->
+                <a href="#" class="emoji-card flex flex-col items-center p-2 sm:p-3 bg-white rounded-lg shadow-md hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 text-3xl sm:text-4xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">🐟</span>
+                    </div>
+                    <p class="text-xs font-medium text-gray-700 text-center truncate w-full">Fish</p>
+                </a>
+                <a href="#" class="emoji-card flex flex-col items-center p-2 sm:p-3 bg-white rounded-lg shadow-md hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 text-3xl sm:text-4xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">💤</span>
+                    </div>
+                    <p class="text-xs font-medium text-gray-700 text-center truncate w-full">Zzz</p>
+                </a>
+                <a href="#" class="emoji-card flex flex-col items-center p-2 sm:p-3 bg-white rounded-lg shadow-md hover:ring-2 ring-blue-500 cursor-pointer">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 text-3xl sm:text-4xl bg-blue-50 rounded-lg">
+                        <span class="text-blue-600">🌀</span>
+                    </div>
+                    <p class="text-xs font-medium text-gray-700 text-center truncate w-full">Cyclone</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Reused from Index) -->
+    <footer class="bg-gray-800 text-white py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-4">
+                © 2025 BlueEmoji.com.
+            </p>
+            <!-- License Requirement: CC BY-SA 4.0 Statement -->
+            <p class="text-xs text-gray-400">
+                Emoji graphics based on <a href="https://openmoji.org/" class="underline hover:text-blue-400">OpenMoji</a> – the open-source emoji library.
+            </p>
+            <p class="text-xs text-gray-400">
+                Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="underline hover:text-blue-400">CC BY-SA 4.0</a>. Blue edition files are available for download.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
