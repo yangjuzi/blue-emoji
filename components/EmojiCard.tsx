@@ -1,14 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface EmojiData {
-  id: string;
-  name: string;
-  emoji: string;
-  category: string;
-  keywords: string[];
-  description?: string;
-}
+// 🌟 导入全局定义的 EmojiData 接口 (假设路径是 ../../types)
+import { EmojiData } from '../types';
 
 interface EmojiCardProps {
   emoji: EmojiData;
