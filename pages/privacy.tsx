@@ -65,14 +65,14 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-gray-50 p-4 rounded-lg mb-4">
               <h3 className="font-bold text-gray-800 mb-2">Giscus (Comment System)</h3>
               <p className="text-gray-700">
-                Our commenting functionality is powered by Giscus, which is based on GitHub Issues. When you leave comments, you are interacting with GitHub's services and are subject to GitHub's Privacy Policy. We do not have access to your GitHub account information beyond what is publicly visible in comments.
+                Our commenting functionality is powered by Giscus, which is based on GitHub Issues. When you leave comments, you are interacting with GitHub&apos;s services and are subject to GitHub&apos;s Privacy Policy. We do not have access to your GitHub account information beyond what is publicly visible in comments.
               </p>
             </div>
 
             <div className="bg-gray-50 p-4 rounded-lg">
               <h3 className="font-bold text-gray-800 mb-2">Vercel (Hosting)</h3>
               <p className="text-gray-700">
-                Our website is hosted on Vercel, which may collect technical data for service delivery. Review Vercel's Privacy Policy for more information.
+                Our website is hosted on Vercel, which may collect technical data for service delivery. Review Vercel&apos;s Privacy Policy for more information.
               </p>
             </div>
           </section>
@@ -121,7 +121,7 @@ const PrivacyPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-blue-600 mb-4">8. Children's Privacy</h2>
+            <h2 className="text-2xl font-bold text-blue-600 mb-4">8. Children&apos;s Privacy</h2>
             <p className="text-gray-700 leading-relaxed">
               Our service is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will take steps to delete such information.
             </p>

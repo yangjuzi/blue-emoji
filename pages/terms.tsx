@@ -23,7 +23,7 @@ const TermsPage: React.FC = () => {
               <strong>Last updated:</strong> December 6, 2025
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Welcome to BlueEmoji.com. These Terms of Service ("Terms") govern your use of our website and the Blue Emoji collection. By accessing or using our services, you agree to be bound by these Terms.
+              Welcome to BlueEmoji.com. These Terms of Service (&quot;Terms&quot;) govern your use of our website and the Blue Emoji collection. By accessing or using our services, you agree to be bound by these Terms.
             </p>
           </section>
 
@@ -115,7 +115,7 @@ const TermsPage: React.FC = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-blue-600 mb-4">7. Disclaimer of Warranties</h2>
             <p className="text-gray-700 leading-relaxed">
-              BlueEmoji.com and the emoji files are provided "as is" without warranty of any kind, either express or implied. We make no warranties regarding the accuracy, reliability, completeness, or timeliness of the content.
+              BlueEmoji.com and the emoji files are provided &quot;as is&quot; without warranty of any kind, either express or implied. We make no warranties regarding the accuracy, reliability, completeness, or timeliness of the content.
             </p>
           </section>
 

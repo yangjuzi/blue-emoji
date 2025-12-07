@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import EmojiCard from '../../components/EmojiCard';
@@ -50,10 +51,12 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
       <Layout title="Emoji Not Found">
         <div className="text-center py-12">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Emoji Not Found</h1>
-          <p className="text-gray-600 mb-8">Sorry, we couldn't find the emoji you're looking for.</p>
-          <a href="/" className="text-blue-600 hover:text-blue-700 font-semibold">
+          <p className="text-gray-600 mb-8">Sorry, we couldn&apos;t find the emoji you&apos;re looking for.</p>
+          <Link href="/" passHref>
+            <a className="text-blue-600 hover:text-blue-700 font-semibold">
             ← Back to Home
-          </a>
+            </a>
+          </Link>
         </div>
       </Layout>
     );
@@ -72,7 +75,9 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
       <Layout title={`${emoji.name} - Blue Emoji`}>
         {/* Breadcrumbs */}
         <nav className="text-sm font-medium text-gray-500 mb-6">
-          <a href="/" className="hover:text-blue-600">Home</a> /
+          <Link href="/" passHref>
+ <a className="hover:text-blue-600">Home</a>
+</Link>
           <a href={`/category/${emoji.category}`} className="hover:text-blue-600"> {emoji.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</a> /
           <span className="text-gray-900">{emoji.name}</span>
         </nav>

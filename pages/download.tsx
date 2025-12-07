@@ -88,7 +88,7 @@ const DownloadPage: React.FC = () => {
             <div className="mt-8">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">Attribution Guidance</h3>
               <p className="text-gray-600 mb-4">
-                When using the Blue Emoji graphics, especially for public or commercial projects, please ensure you include the following attribution in your documentation, license files, or a readily accessible 'About' section:
+                When using the Blue Emoji graphics, especially for public or commercial projects, please ensure you include the following attribution in your documentation, license files, or a readily accessible &apos;About&apos; section:
               </p>
               <code className="block bg-gray-800 text-white p-4 rounded-lg text-sm overflow-x-auto select-all">
                 Blue Emoji graphics are derivatives of OpenMoji (CC BY-SA 4.0).

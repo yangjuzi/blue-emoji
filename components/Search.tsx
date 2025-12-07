@@ -71,7 +71,8 @@ const Search: React.FC<SearchProps> = ({
       {query && (
         <div className="text-center mb-6">
           <p className="text-gray-600">
-            Found <span className="font-bold text-blue-600">{results.length}</span> result{results.length !== 1 ? 's' : ''} for "<span className="font-semibold">{query}</span>"
+            Found <span className="font-bold text-blue-600">{results.length}</span> result{results.length !== 1 ? 's' : ''} for &quot;<span className="font-semibold">{query}</span>&quot;
+            
           </p>
         </div>
       )}
