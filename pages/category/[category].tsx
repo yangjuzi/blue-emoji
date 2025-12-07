@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import EmojiCard from '../../components/EmojiCard';
@@ -92,8 +93,10 @@ const CategoryPage: React.FC<CategoryPageProps> = () => {
       >
         {/* Breadcrumbs */}
         <nav className="text-sm font-medium text-gray-500 mb-6">
-          <a href="/" className="hover:text-blue-600">Home</a> /
-          <span className="text-gray-900"> {categoryInfo ? formatCategoryName(categoryInfo.id) : 'Category'}</span>
+          <Link href="/" passHref>
+            <a className="hover:text-blue-600">Home</a>
+          </Link>
+        <span className="text-gray-900"> {categoryInfo ? formatCategoryName(categoryInfo.id) : 'Category'}</span>
         </nav>
 
         {/* Category Header */}
@@ -144,7 +147,11 @@ const CategoryPage: React.FC<CategoryPageProps> = () => {
                 No emojis found in this category
               </p>
               <p className="text-gray-400 mt-2">
-                Try browsing <a href="/category/all" className="text-blue-600 hover:text-blue-700">all categories</a> instead.
+                Try browsing 
+                <Link href="/category/all" passHref>
+                  <a className="text-blue-600 hover:text-blue-700">all categories</a>
+                </Link>
+                instead.
               </p>
             </div>
           )}

@@ -22,7 +22,7 @@ const ContactPage: React.FC = () => {
 
           <section className="mb-8">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              We'd love to hear from you! Whether you have feedback about our blue emoji collection, suggestions for improvement, or questions about licensing and usage, feel free to reach out.
+              We&apos;d love to hear from you! Whether you have feedback about our blue emoji collection, suggestions for improvement, or questions about licensing and usage, feel free to reach out.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ const ContactPage: React.FC = () => {
               <div className="border-l-4 border-blue-500 pl-4">
                 <h3 className="font-bold text-gray-800 mb-2">Are there different shades of blue available?</h3>
                 <p className="text-gray-600">
-                  Currently, we use a consistent blue theme (#2563eb) across all emojis. However, we're exploring options for different blue variations in future releases based on community demand.
+                  Currently, we use a consistent blue theme (#2563eb) across all emojis. However, We&apos;re exploring options for different blue variations in future releases based on community demand.
                 </p>
               </div>
             </div>

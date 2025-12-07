@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const AboutPage: React.FC = () => {
@@ -89,9 +90,11 @@ const AboutPage: React.FC = () => {
             <p className="text-blue-800 mt-2">
               This means you are free to: <strong>use, share, and modify</strong> our Blue Emojis, but you must: <strong>credit the original authors (OpenMoji) and our modification, and release your contributions under the same CC BY-SA 4.0 license.</strong>
             </p>
-            <a href="/download" className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-semibold transition">
-              <i className="fas fa-hand-point-right mr-1"></i> Go to Download Full Resource Pack
-            </a>
+            <Link href="/download" passHref>
+             <a className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-semibold transition">
+                <i className="fas fa-hand-point-right mr-1"></i> Go to Download Full Resource Pack
+             </a>
+            </Link>
           </section>
         </div>
       </Layout>
