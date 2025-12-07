@@ -1,0 +1,36 @@
+{
+  "name": "blue-emoji",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export",
+    "download:openmoji": "node scripts/color-convert.js",
+    "generate:png": "node scripts/generate-png.js",
+    "generate:data": "node scripts/generate-data.js",
+    "build:assets": "npm run download:openmoji && npm run generate:data && npm run generate:png"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@giscus/react": "^3.0.0",
+    "lucide-react": "^0.295.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
+    "sharp": "^0.33.0",
+    "unzipper": "^0.10.14"
+  }
+}

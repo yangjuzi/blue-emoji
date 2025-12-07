@@ -1,0 +1,189 @@
+{
+  "emojis": [
+    {
+      "id": "blue-heart",
+      "name": "blue heart",
+      "category": "symbols",
+      "unicode": "U+1F499",
+      "emoji": "💙",
+      "keywords": [
+        "blue heart",
+        "symbols",
+        "blue",
+        "heart"
+      ],
+      "description": "The Blue Heart emoji represents affection, support, and deep platonic love. It is often associated with trust, serenity, and loyalty.",
+      "svgPath": "/emojis/blue-svg/1F499.svg",
+      "pngPath": "/emojis/blue-png/1F499-64.png"
+    },
+    {
+      "id": "blue-circle",
+      "name": "blue circle",
+      "category": "symbols",
+      "unicode": "U+1F535",
+      "emoji": "🔵",
+      "keywords": [
+        "blue circle",
+        "symbols",
+        "blue",
+        "circle"
+      ],
+      "description": "A solid blue circle, often used to represent the color blue or circular objects.",
+      "svgPath": "/emojis/blue-svg/1F535.svg",
+      "pngPath": "/emojis/blue-png/1F535-64.png"
+    },
+    {
+      "id": "water-wave",
+      "name": "water wave",
+      "category": "travel-places",
+      "unicode": "U+1F30A",
+      "emoji": "🌊",
+      "keywords": [
+        "water wave",
+        "travel places",
+        "water",
+        "wave"
+      ],
+      "description": "A wave of water, representing the ocean, sea, or water in general.",
+      "svgPath": "/emojis/blue-svg/1F30A.svg",
+      "pngPath": "/emojis/blue-png/1F30A-64.png"
+    },
+    {
+      "id": "droplet",
+      "name": "droplet",
+      "category": "symbols",
+      "unicode": "U+1F4A7",
+      "emoji": "💧",
+      "keywords": [
+        "droplet",
+        "symbols",
+        "droplet"
+      ],
+      "description": "A single droplet of water, representing moisture, rain, or small amounts of liquid.",
+      "svgPath": "/emojis/blue-svg/1F4A7.svg",
+      "pngPath": "/emojis/blue-png/1F4A7-64.png"
+    },
+    {
+      "id": "blue-book",
+      "name": "blue book",
+      "category": "objects",
+      "unicode": "U+1F4D8",
+      "emoji": "📘",
+      "keywords": [
+        "blue book",
+        "objects",
+        "blue",
+        "book"
+      ],
+      "description": "The blue book emoji represents blue book, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg/1F4D8.svg",
+      "pngPath": "/emojis/blue-png/1F4D8-64.png"
+    },
+    {
+      "id": "gem-stone",
+      "name": "gem stone",
+      "category": "objects",
+      "unicode": "U+1F48E",
+      "emoji": "💎",
+      "keywords": [
+        "gem stone",
+        "objects",
+        "gem",
+        "stone"
+      ],
+      "description": "A precious gem stone, representing value, beauty, and rarity.",
+      "svgPath": "/emojis/blue-svg/1F48E.svg",
+      "pngPath": "/emojis/blue-png/1F48E-64.png"
+    },
+    {
+      "id": "cloud-with-rain",
+      "name": "cloud with rain",
+      "category": "symbols",
+      "unicode": "U+1F327",
+      "emoji": "🌧",
+      "keywords": [
+        "cloud with rain",
+        "symbols",
+        "cloud",
+        "with",
+        "rain"
+      ],
+      "description": "The cloud with rain emoji represents cloud with rain, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg/1F327.svg",
+      "pngPath": "/emojis/blue-png/1F327-64.png"
+    },
+    {
+      "id": "sleeping-face",
+      "name": "sleeping face",
+      "category": "smileys-emotion",
+      "unicode": "U+1F4A4",
+      "emoji": "💤",
+      "keywords": [
+        "sleeping face",
+        "smileys emotion",
+        "sleeping",
+        "face"
+      ],
+      "description": "The sleeping face emoji represents sleeping face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg/1F4A4.svg",
+      "pngPath": "/emojis/blue-png/1F4A4-64.png"
+    },
+    {
+      "id": "whale",
+      "name": "whale",
+      "category": "animals-nature",
+      "unicode": "U+1F40B",
+      "emoji": "🐋",
+      "keywords": [
+        "whale",
+        "animals nature",
+        "whale"
+      ],
+      "description": "The whale emoji represents whale, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg/1F40B.svg",
+      "pngPath": "/emojis/blue-png/1F40B-64.png"
+    },
+    {
+      "id": "fish",
+      "name": "fish",
+      "category": "animals-nature",
+      "unicode": "U+1F41F",
+      "emoji": "🐟",
+      "keywords": [
+        "fish",
+        "animals nature",
+        "fish"
+      ],
+      "description": "The fish emoji represents fish, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg/1F41F.svg",
+      "pngPath": "/emojis/blue-png/1F41F-64.png"
+    }
+  ],
+  "categories": [
+    {
+      "id": "smileys-emotion",
+      "name": "Smileys Emotion",
+      "count": 1
+    },
+    {
+      "id": "animals-nature",
+      "name": "Animals Nature",
+      "count": 2
+    },
+    {
+      "id": "travel-places",
+      "name": "Travel Places",
+      "count": 1
+    },
+    {
+      "id": "objects",
+      "name": "Objects",
+      "count": 2
+    },
+    {
+      "id": "symbols",
+      "name": "Symbols",
+      "count": 4
+    }
+  ]
+}
