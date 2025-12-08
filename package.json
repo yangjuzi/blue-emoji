@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export",
     "download:openmoji": "node scripts/color-convert.js",
     "generate:png": "node scripts/generate-png.js",
     "generate:data": "node scripts/generate-data.js",
