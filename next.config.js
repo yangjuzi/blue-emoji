@@ -5,17 +5,17 @@ const nextConfig = {
         unoptimized: true
     },
     trailingSlash: true,
-    // 移除 generateBuildId: () => 'build',
     assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-    // 🌟 关键修改：移除 distDir: 'out'
     
-    // 保留上次添加的 experimental 修复配置
+    // 🌟 关键修改：将 outputFileTracingIgnores 更改为 outputFileTracingExcludes
     experimental: {
-        outputFileTracingIgnores: [
-            './node_modules/.pnpm/**', 
-            './data/**', 
-            './.next/cache/**',
-        ],
+        outputFileTracingExcludes: { // 💡 新名称
+            '*': [
+                './node_modules/.pnpm/**', 
+                './data/**', 
+                './.next/cache/**',
+            ]
+        },
     },
 }
 
