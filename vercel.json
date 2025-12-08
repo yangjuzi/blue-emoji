@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "next build && next export",
   "outputDirectory": "out",
   "cleanUrls": true,
   "trailingSlash": true,
