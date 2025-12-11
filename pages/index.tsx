@@ -34,7 +34,7 @@ const HomePage: React.FC<HomePageProps> = () => {
   return (
     <>
       <Head>
-        <title>BlueEmoji.com - Explore Blue Emojis</title>
+        <title>Blue-Emoji.com - Explore Blue Emojis</title>
         <meta name="description" content="The definitive library of open-source emojis, colored for calm, loyalty, and serenity." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@ const HomePage: React.FC<HomePageProps> = () => {
         {/* Hero Section */}
         <div className="text-center mb-8">
           <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">
-            <span className="text-blue-600">Blue</span>Emoji.com
+            <span className="text-blue-600">Blue-</span>Emoji.com
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
             The definitive library of open-source emojis, colored for calm, loyalty, and serenity.
