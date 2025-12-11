@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-// 🌟 导入全局定义的 EmojiData 接口 (假设路径是 ../../types)
+// 假设您的类型定义文件位于正确的位置
 import { EmojiData } from '../types';
 
 interface EmojiCardProps {
@@ -17,10 +17,12 @@ const EmojiCard: React.FC<EmojiCardProps> = ({
   showName = true,
   onClick
 }) => {
+  
+  // ⬇️ 调整 1：增大 medium 尺寸，让 Emoji 看起来更大
   const sizeClasses = {
-    small: 'w-8 h-8 sm:w-10 sm:h-10 text-2xl sm:text-3xl',
-    medium: 'w-12 h-12 sm:w-16 sm:h-16 text-4xl sm:text-5xl',
-    large: 'w-16 h-16 sm:w-20 sm:h-20 text-5xl sm:text-6xl'
+    small: 'w-10 h-10 sm:w-12 sm:h-12', 
+    medium: 'w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20', 
+    large: 'w-20 h-20 sm:w-24 sm:h-24' 
   };
 
   const paddingClasses = {
@@ -28,27 +30,54 @@ const EmojiCard: React.FC<EmojiCardProps> = ({
     medium: 'p-3 sm:p-4',
     large: 'p-4 sm:p-6'
   };
-
-  // 提取通用样式，用于 Link 内部的 <a> 标签 或 div
-  const cardClassName = `emoji-card flex flex-col items-center ${paddingClasses[size]} bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-200 hover:transform hover:-translate-y-1 cursor-pointer hover:ring-2 hover:ring-blue-400 ${
-    size === 'small' ? 'max-w-[80px] sm:max-w-[100px]' : size === 'large' ? 'max-w-[140px] sm:max-w-[180px]' : 'max-w-[100px] sm:max-w-[120px]'
-  }`;
-
-  // 提取卡片核心内容，方便复用
-  const cardContent = (
+// ⬇️ 调整 2：增加卡片的 max-w，并设置最小高度 h-32 以容纳两行文本
+const cardClassName = [
+  'emoji-card', 
+  'flex', 'flex-col', 'items-center', 
+  paddingClasses[size], 
+  'bg-white', 'rounded-xl', 'shadow-md', 'hover:shadow-xl', 
+  'transition-all', 'duration-200', 'hover:transform', 'hover:-translate-y-1', 
+  'cursor-pointer', 'hover:ring-2', 'hover:ring-blue-400', 
+  'min-h-[150px]', // 确保卡片有最小高度
+  size === 'small' 
+    ? 'max-w-[90px] sm:max-w-[110px]' 
+    : size === 'large' 
+      ? 'max-w-[150px] sm:max-w-[200px]' 
+      : 'max-w-[110px] sm:max-w-[140px]'
+].join(' '); 
+/*
+ * 注意：这里我们使用 Array.join(' ') 来构建 className 字符串，
+ * 这是在复杂逻辑下更健壮的做法，避免了模板字符串的解析问题。
+*/
+const cardContent = (
     <>
-      <div className={`${sizeClasses[size]} flex items-center justify-center mb-2 bg-blue-100 rounded-lg transition duration-300 hover:scale-110 text-blue-600`}>
-        <span className="leading-none">{emoji.emoji}</span>
+      {/* SVG 容器：使用 sizeClasses 确定尺寸 */}
+      <div className={`${sizeClasses[size]} flex items-center justify-center mb-1 bg-blue-50 rounded-lg transition duration-300 hover:scale-110`}>
+        {/* 关键修改：使用 img 标签加载 SVG 文件 */}
+        <img 
+          src={emoji.svgPath} 
+          alt={emoji.name}
+          className="w-full h-full object-contain" 
+        />
       </div>
-      {showName && (
-        <p className="text-sm font-semibold text-gray-700 text-center truncate w-full">
-          {emoji.name}
-        </p>
-      )}
+      
+      {/* ⬇️ 调整 3：移除 truncate，允许最多两行文本显示 (line-clamp-2) */}
+     {showName && (
+  <p 
+    className="
+      text-sm font-medium text-gray-700 text-center 
+      w-full
+      line-clamp-2
+    "
+    title={emoji.name}
+  >
+    {emoji.name}
+  </p>
+)}
     </>
   );
 
-  // 🌟 修复 Type Error 的关键：使用条件渲染
+  // 渲染逻辑保持不变（Link 或 Div）
   if (onClick) {
     // 情况 1: 提供了 onClick prop -> 渲染一个带点击事件的 div
     return (
@@ -63,7 +92,6 @@ const EmojiCard: React.FC<EmojiCardProps> = ({
     // 情况 2: 没有提供 onClick prop -> 渲染一个用于页面导航的 Next.js Link
     return (
       <Link href={`/emoji/${emoji.id}`} passHref legacyBehavior>
-        {/* 使用 legacyBehavior 确保样式正确应用到 <a> 标签上 */}
         <a className={cardClassName}>
           {cardContent}
         </a>

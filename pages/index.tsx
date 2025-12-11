@@ -94,7 +94,7 @@ const HomePage: React.FC<HomePageProps> = () => {
 
           {/* Emoji Grid */}
           {searchResults.length > 0 ? (
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-3 sm:gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-8 gap-3 sm:gap-4">
               {searchResults.map((emoji) => (
                 <EmojiCard
                   key={emoji.id}

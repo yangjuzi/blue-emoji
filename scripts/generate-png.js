@@ -10,9 +10,11 @@ const path = require('path');
 const sharp = require('sharp');
 
 const config = {
-  inputDir: './public/emojis/blue-svg',
-  outputDir: './public/emojis/blue-png',
-  sizes: [64, 128, 256], // PNG sizes to generate
+  // ⬇️ 关键修改 3: 输入目录指向新的子集 SVG 目录
+  inputDir: './public/emojis/blue-svg-smileys', 
+  // 输出目录可以保持不变，或根据需要更改
+  outputDir: './public/emojis/blue-png-smileys',
+  sizes: [256], // PNG sizes to generate
   backgroundColor: { r: 0, g: 0, b: 0, alpha: 0 } // Transparent background
 };
 

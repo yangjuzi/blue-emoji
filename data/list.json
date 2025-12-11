@@ -1,6 +1,2481 @@
 {
   "emojis": [
     {
+      "id": "grinning-face",
+      "name": "grinning face",
+      "category": "symbols",
+      "unicode": "U+1F600",
+      "emoji": "😀",
+      "keywords": [
+        "grinning face",
+        "symbols",
+        "grinning",
+        "face"
+      ],
+      "description": "The grinning face emoji represents grinning face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F600.svg",
+      "pngPath": "/emojis/blue-png/1F600-64.png"
+    },
+    {
+      "id": "grinning-face-with-big-eyes",
+      "name": "grinning face with big eyes",
+      "category": "symbols",
+      "unicode": "U+1F603",
+      "emoji": "😃",
+      "keywords": [
+        "grinning face with big eyes",
+        "symbols",
+        "grinning",
+        "face",
+        "with",
+        "big",
+        "eyes"
+      ],
+      "description": "The grinning face with big eyes emoji represents grinning face with big eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F603.svg",
+      "pngPath": "/emojis/blue-png/1F603-64.png"
+    },
+    {
+      "id": "grinning-face-with-smiling-eyes",
+      "name": "grinning face with smiling eyes",
+      "category": "symbols",
+      "unicode": "U+1F604",
+      "emoji": "😄",
+      "keywords": [
+        "grinning face with smiling eyes",
+        "symbols",
+        "grinning",
+        "face",
+        "with",
+        "smiling",
+        "eyes"
+      ],
+      "description": "The grinning face with smiling eyes emoji represents grinning face with smiling eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F604.svg",
+      "pngPath": "/emojis/blue-png/1F604-64.png"
+    },
+    {
+      "id": "beaming-face-with-smiling-eyes",
+      "name": "beaming face with smiling eyes",
+      "category": "symbols",
+      "unicode": "U+1F601",
+      "emoji": "😁",
+      "keywords": [
+        "beaming face with smiling eyes",
+        "symbols",
+        "beaming",
+        "face",
+        "with",
+        "smiling",
+        "eyes"
+      ],
+      "description": "The beaming face with smiling eyes emoji represents beaming face with smiling eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F601.svg",
+      "pngPath": "/emojis/blue-png/1F601-64.png"
+    },
+    {
+      "id": "grinning-squinting-face",
+      "name": "grinning squinting face",
+      "category": "symbols",
+      "unicode": "U+1F606",
+      "emoji": "😆",
+      "keywords": [
+        "grinning squinting face",
+        "symbols",
+        "grinning",
+        "squinting",
+        "face"
+      ],
+      "description": "The grinning squinting face emoji represents grinning squinting face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F606.svg",
+      "pngPath": "/emojis/blue-png/1F606-64.png"
+    },
+    {
+      "id": "grinning-face-with-sweat",
+      "name": "grinning face with sweat",
+      "category": "symbols",
+      "unicode": "U+1F605",
+      "emoji": "😅",
+      "keywords": [
+        "grinning face with sweat",
+        "symbols",
+        "grinning",
+        "face",
+        "with",
+        "sweat"
+      ],
+      "description": "The grinning face with sweat emoji represents grinning face with sweat, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F605.svg",
+      "pngPath": "/emojis/blue-png/1F605-64.png"
+    },
+    {
+      "id": "rolling-on-the-floor-laughing",
+      "name": "rolling on the floor laughing",
+      "category": "symbols",
+      "unicode": "U+1F923",
+      "emoji": "🤣",
+      "keywords": [
+        "rolling on the floor laughing",
+        "symbols",
+        "rolling",
+        "the",
+        "floor",
+        "laughing"
+      ],
+      "description": "The rolling on the floor laughing emoji represents rolling on the floor laughing, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F923.svg",
+      "pngPath": "/emojis/blue-png/1F923-64.png"
+    },
+    {
+      "id": "face-with-tears-of-joy",
+      "name": "face with tears of joy",
+      "category": "symbols",
+      "unicode": "U+1F602",
+      "emoji": "😂",
+      "keywords": [
+        "face with tears of joy",
+        "symbols",
+        "face",
+        "with",
+        "tears",
+        "joy"
+      ],
+      "description": "The face with tears of joy emoji represents face with tears of joy, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F602.svg",
+      "pngPath": "/emojis/blue-png/1F602-64.png"
+    },
+    {
+      "id": "slightly-smiling-face",
+      "name": "slightly smiling face",
+      "category": "symbols",
+      "unicode": "U+1F642",
+      "emoji": "🙂",
+      "keywords": [
+        "slightly smiling face",
+        "symbols",
+        "slightly",
+        "smiling",
+        "face"
+      ],
+      "description": "The slightly smiling face emoji represents slightly smiling face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F642.svg",
+      "pngPath": "/emojis/blue-png/1F642-64.png"
+    },
+    {
+      "id": "upside-down-face",
+      "name": "upside-down face",
+      "category": "symbols",
+      "unicode": "U+1F643",
+      "emoji": "🙃",
+      "keywords": [
+        "upside down face",
+        "symbols",
+        "upside-down",
+        "face"
+      ],
+      "description": "The upside-down face emoji represents upside-down face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F643.svg",
+      "pngPath": "/emojis/blue-png/1F643-64.png"
+    },
+    {
+      "id": "melting-face",
+      "name": "melting face",
+      "category": "symbols",
+      "unicode": "U+1FAE0",
+      "emoji": "🫠",
+      "keywords": [
+        "melting face",
+        "symbols",
+        "melting",
+        "face"
+      ],
+      "description": "The melting face emoji represents melting face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FAE0.svg",
+      "pngPath": "/emojis/blue-png/1FAE0-64.png"
+    },
+    {
+      "id": "winking-face",
+      "name": "winking face",
+      "category": "symbols",
+      "unicode": "U+1F609",
+      "emoji": "😉",
+      "keywords": [
+        "winking face",
+        "symbols",
+        "winking",
+        "face"
+      ],
+      "description": "The winking face emoji represents winking face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F609.svg",
+      "pngPath": "/emojis/blue-png/1F609-64.png"
+    },
+    {
+      "id": "smiling-face-with-smiling-eyes",
+      "name": "smiling face with smiling eyes",
+      "category": "symbols",
+      "unicode": "U+1F60A",
+      "emoji": "😊",
+      "keywords": [
+        "smiling face with smiling eyes",
+        "symbols",
+        "smiling",
+        "face",
+        "with",
+        "smiling",
+        "eyes"
+      ],
+      "description": "The smiling face with smiling eyes emoji represents smiling face with smiling eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F60A.svg",
+      "pngPath": "/emojis/blue-png/1F60A-64.png"
+    },
+    {
+      "id": "smiling-face-with-halo",
+      "name": "smiling face with halo",
+      "category": "symbols",
+      "unicode": "U+1F607",
+      "emoji": "😇",
+      "keywords": [
+        "smiling face with halo",
+        "symbols",
+        "smiling",
+        "face",
+        "with",
+        "halo"
+      ],
+      "description": "The smiling face with halo emoji represents smiling face with halo, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F607.svg",
+      "pngPath": "/emojis/blue-png/1F607-64.png"
+    },
+    {
+      "id": "smiling-face-with-hearts",
+      "name": "smiling face with hearts",
+      "category": "symbols",
+      "unicode": "U+1F970",
+      "emoji": "🥰",
+      "keywords": [
+        "smiling face with hearts",
+        "symbols",
+        "smiling",
+        "face",
+        "with",
+        "hearts"
+      ],
+      "description": "The smiling face with hearts emoji represents smiling face with hearts, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F970.svg",
+      "pngPath": "/emojis/blue-png/1F970-64.png"
+    },
+    {
+      "id": "smiling-face-with-heart-eyes",
+      "name": "smiling face with heart-eyes",
+      "category": "symbols",
+      "unicode": "U+1F60D",
+      "emoji": "😍",
+      "keywords": [
+        "smiling face with heart eyes",
+        "symbols",
+        "smiling",
+        "face",
+        "with",
+        "heart-eyes"
+      ],
+      "description": "The smiling face with heart-eyes emoji represents smiling face with heart-eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F60D.svg",
+      "pngPath": "/emojis/blue-png/1F60D-64.png"
+    },
+    {
+      "id": "star-struck",
+      "name": "star-struck",
+      "category": "symbols",
+      "unicode": "U+1F929",
+      "emoji": "🤩",
+      "keywords": [
+        "star struck",
+        "symbols",
+        "star-struck"
+      ],
+      "description": "The star-struck emoji represents star-struck, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F929.svg",
+      "pngPath": "/emojis/blue-png/1F929-64.png"
+    },
+    {
+      "id": "face-blowing-a-kiss",
+      "name": "face blowing a kiss",
+      "category": "symbols",
+      "unicode": "U+1F618",
+      "emoji": "😘",
+      "keywords": [
+        "face blowing a kiss",
+        "symbols",
+        "face",
+        "blowing",
+        "kiss"
+      ],
+      "description": "The face blowing a kiss emoji represents face blowing a kiss, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F618.svg",
+      "pngPath": "/emojis/blue-png/1F618-64.png"
+    },
+    {
+      "id": "kissing-face",
+      "name": "kissing face",
+      "category": "symbols",
+      "unicode": "U+1F617",
+      "emoji": "😗",
+      "keywords": [
+        "kissing face",
+        "symbols",
+        "kissing",
+        "face"
+      ],
+      "description": "The kissing face emoji represents kissing face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F617.svg",
+      "pngPath": "/emojis/blue-png/1F617-64.png"
+    },
+    {
+      "id": "smiling-face",
+      "name": "smiling face",
+      "category": "symbols",
+      "unicode": "U+263A",
+      "emoji": "☺",
+      "keywords": [
+        "smiling face",
+        "symbols",
+        "smiling",
+        "face"
+      ],
+      "description": "The smiling face emoji represents smiling face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/263A.svg",
+      "pngPath": "/emojis/blue-png/263A-64.png"
+    },
+    {
+      "id": "kissing-face-with-closed-eyes",
+      "name": "kissing face with closed eyes",
+      "category": "symbols",
+      "unicode": "U+1F61A",
+      "emoji": "😚",
+      "keywords": [
+        "kissing face with closed eyes",
+        "symbols",
+        "kissing",
+        "face",
+        "with",
+        "closed",
+        "eyes"
+      ],
+      "description": "The kissing face with closed eyes emoji represents kissing face with closed eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F61A.svg",
+      "pngPath": "/emojis/blue-png/1F61A-64.png"
+    },
+    {
+      "id": "kissing-face-with-smiling-eyes",
+      "name": "kissing face with smiling eyes",
+      "category": "symbols",
+      "unicode": "U+1F619",
+      "emoji": "😙",
+      "keywords": [
+        "kissing face with smiling eyes",
+        "symbols",
+        "kissing",
+        "face",
+        "with",
+        "smiling",
+        "eyes"
+      ],
+      "description": "The kissing face with smiling eyes emoji represents kissing face with smiling eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F619.svg",
+      "pngPath": "/emojis/blue-png/1F619-64.png"
+    },
+    {
+      "id": "smiling-face-with-tear",
+      "name": "smiling face with tear",
+      "category": "symbols",
+      "unicode": "U+1F972",
+      "emoji": "🥲",
+      "keywords": [
+        "smiling face with tear",
+        "symbols",
+        "smiling",
+        "face",
+        "with",
+        "tear"
+      ],
+      "description": "The smiling face with tear emoji represents smiling face with tear, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F972.svg",
+      "pngPath": "/emojis/blue-png/1F972-64.png"
+    },
+    {
+      "id": "face-savoring-food",
+      "name": "face savoring food",
+      "category": "symbols",
+      "unicode": "U+1F60B",
+      "emoji": "😋",
+      "keywords": [
+        "face savoring food",
+        "symbols",
+        "face",
+        "savoring",
+        "food"
+      ],
+      "description": "The face savoring food emoji represents face savoring food, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F60B.svg",
+      "pngPath": "/emojis/blue-png/1F60B-64.png"
+    },
+    {
+      "id": "face-with-tongue",
+      "name": "face with tongue",
+      "category": "symbols",
+      "unicode": "U+1F61B",
+      "emoji": "😛",
+      "keywords": [
+        "face with tongue",
+        "symbols",
+        "face",
+        "with",
+        "tongue"
+      ],
+      "description": "The face with tongue emoji represents face with tongue, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F61B.svg",
+      "pngPath": "/emojis/blue-png/1F61B-64.png"
+    },
+    {
+      "id": "winking-face-with-tongue",
+      "name": "winking face with tongue",
+      "category": "symbols",
+      "unicode": "U+1F61C",
+      "emoji": "😜",
+      "keywords": [
+        "winking face with tongue",
+        "symbols",
+        "winking",
+        "face",
+        "with",
+        "tongue"
+      ],
+      "description": "The winking face with tongue emoji represents winking face with tongue, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F61C.svg",
+      "pngPath": "/emojis/blue-png/1F61C-64.png"
+    },
+    {
+      "id": "zany-face",
+      "name": "zany face",
+      "category": "symbols",
+      "unicode": "U+1F92A",
+      "emoji": "🤪",
+      "keywords": [
+        "zany face",
+        "symbols",
+        "zany",
+        "face"
+      ],
+      "description": "The zany face emoji represents zany face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F92A.svg",
+      "pngPath": "/emojis/blue-png/1F92A-64.png"
+    },
+    {
+      "id": "squinting-face-with-tongue",
+      "name": "squinting face with tongue",
+      "category": "symbols",
+      "unicode": "U+1F61D",
+      "emoji": "😝",
+      "keywords": [
+        "squinting face with tongue",
+        "symbols",
+        "squinting",
+        "face",
+        "with",
+        "tongue"
+      ],
+      "description": "The squinting face with tongue emoji represents squinting face with tongue, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F61D.svg",
+      "pngPath": "/emojis/blue-png/1F61D-64.png"
+    },
+    {
+      "id": "money-mouth-face",
+      "name": "money-mouth face",
+      "category": "symbols",
+      "unicode": "U+1F911",
+      "emoji": "🤑",
+      "keywords": [
+        "money mouth face",
+        "symbols",
+        "money-mouth",
+        "face"
+      ],
+      "description": "The money-mouth face emoji represents money-mouth face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F911.svg",
+      "pngPath": "/emojis/blue-png/1F911-64.png"
+    },
+    {
+      "id": "smiling-face-with-open-hands",
+      "name": "smiling face with open hands",
+      "category": "symbols",
+      "unicode": "U+1F917",
+      "emoji": "🤗",
+      "keywords": [
+        "smiling face with open hands",
+        "symbols",
+        "smiling",
+        "face",
+        "with",
+        "open",
+        "hands"
+      ],
+      "description": "The smiling face with open hands emoji represents smiling face with open hands, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F917.svg",
+      "pngPath": "/emojis/blue-png/1F917-64.png"
+    },
+    {
+      "id": "face-with-hand-over-mouth",
+      "name": "face with hand over mouth",
+      "category": "symbols",
+      "unicode": "U+1F92D",
+      "emoji": "🤭",
+      "keywords": [
+        "face with hand over mouth",
+        "symbols",
+        "face",
+        "with",
+        "hand",
+        "over",
+        "mouth"
+      ],
+      "description": "The face with hand over mouth emoji represents face with hand over mouth, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F92D.svg",
+      "pngPath": "/emojis/blue-png/1F92D-64.png"
+    },
+    {
+      "id": "face-with-open-eyes-and-hand-over-mouth",
+      "name": "face with open eyes and hand over mouth",
+      "category": "symbols",
+      "unicode": "U+1FAE2",
+      "emoji": "🫢",
+      "keywords": [
+        "face with open eyes and hand over mouth",
+        "symbols",
+        "face",
+        "with",
+        "open",
+        "eyes",
+        "and"
+      ],
+      "description": "The face with open eyes and hand over mouth emoji represents face with open eyes and hand over mouth, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FAE2.svg",
+      "pngPath": "/emojis/blue-png/1FAE2-64.png"
+    },
+    {
+      "id": "face-with-peeking-eye",
+      "name": "face with peeking eye",
+      "category": "symbols",
+      "unicode": "U+1FAE3",
+      "emoji": "🫣",
+      "keywords": [
+        "face with peeking eye",
+        "symbols",
+        "face",
+        "with",
+        "peeking",
+        "eye"
+      ],
+      "description": "The face with peeking eye emoji represents face with peeking eye, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FAE3.svg",
+      "pngPath": "/emojis/blue-png/1FAE3-64.png"
+    },
+    {
+      "id": "shushing-face",
+      "name": "shushing face",
+      "category": "symbols",
+      "unicode": "U+1F92B",
+      "emoji": "🤫",
+      "keywords": [
+        "shushing face",
+        "symbols",
+        "shushing",
+        "face"
+      ],
+      "description": "The shushing face emoji represents shushing face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F92B.svg",
+      "pngPath": "/emojis/blue-png/1F92B-64.png"
+    },
+    {
+      "id": "thinking-face",
+      "name": "thinking face",
+      "category": "symbols",
+      "unicode": "U+1F914",
+      "emoji": "🤔",
+      "keywords": [
+        "thinking face",
+        "symbols",
+        "thinking",
+        "face"
+      ],
+      "description": "The thinking face emoji represents thinking face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F914.svg",
+      "pngPath": "/emojis/blue-png/1F914-64.png"
+    },
+    {
+      "id": "saluting-face",
+      "name": "saluting face",
+      "category": "symbols",
+      "unicode": "U+1FAE1",
+      "emoji": "🫡",
+      "keywords": [
+        "saluting face",
+        "symbols",
+        "saluting",
+        "face"
+      ],
+      "description": "The saluting face emoji represents saluting face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FAE1.svg",
+      "pngPath": "/emojis/blue-png/1FAE1-64.png"
+    },
+    {
+      "id": "zipper-mouth-face",
+      "name": "zipper-mouth face",
+      "category": "symbols",
+      "unicode": "U+1F910",
+      "emoji": "🤐",
+      "keywords": [
+        "zipper mouth face",
+        "symbols",
+        "zipper-mouth",
+        "face"
+      ],
+      "description": "The zipper-mouth face emoji represents zipper-mouth face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F910.svg",
+      "pngPath": "/emojis/blue-png/1F910-64.png"
+    },
+    {
+      "id": "face-with-raised-eyebrow",
+      "name": "face with raised eyebrow",
+      "category": "symbols",
+      "unicode": "U+1F928",
+      "emoji": "🤨",
+      "keywords": [
+        "face with raised eyebrow",
+        "symbols",
+        "face",
+        "with",
+        "raised",
+        "eyebrow"
+      ],
+      "description": "The face with raised eyebrow emoji represents face with raised eyebrow, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F928.svg",
+      "pngPath": "/emojis/blue-png/1F928-64.png"
+    },
+    {
+      "id": "neutral-face",
+      "name": "neutral face",
+      "category": "symbols",
+      "unicode": "U+1F610",
+      "emoji": "😐",
+      "keywords": [
+        "neutral face",
+        "symbols",
+        "neutral",
+        "face"
+      ],
+      "description": "The neutral face emoji represents neutral face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F610.svg",
+      "pngPath": "/emojis/blue-png/1F610-64.png"
+    },
+    {
+      "id": "expressionless-face",
+      "name": "expressionless face",
+      "category": "symbols",
+      "unicode": "U+1F611",
+      "emoji": "😑",
+      "keywords": [
+        "expressionless face",
+        "symbols",
+        "expressionless",
+        "face"
+      ],
+      "description": "The expressionless face emoji represents expressionless face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F611.svg",
+      "pngPath": "/emojis/blue-png/1F611-64.png"
+    },
+    {
+      "id": "face-without-mouth",
+      "name": "face without mouth",
+      "category": "symbols",
+      "unicode": "U+1F636",
+      "emoji": "😶",
+      "keywords": [
+        "face without mouth",
+        "symbols",
+        "face",
+        "without",
+        "mouth"
+      ],
+      "description": "The face without mouth emoji represents face without mouth, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F636.svg",
+      "pngPath": "/emojis/blue-png/1F636-64.png"
+    },
+    {
+      "id": "dotted-line-face",
+      "name": "dotted line face",
+      "category": "symbols",
+      "unicode": "U+1FAE5",
+      "emoji": "🫥",
+      "keywords": [
+        "dotted line face",
+        "symbols",
+        "dotted",
+        "line",
+        "face"
+      ],
+      "description": "The dotted line face emoji represents dotted line face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FAE5.svg",
+      "pngPath": "/emojis/blue-png/1FAE5-64.png"
+    },
+    {
+      "id": "face-in-clouds",
+      "name": "face in clouds",
+      "category": "symbols",
+      "unicode": "U+1F636+200D+1F32B+FE0F",
+      "emoji": "😶‍🌫️",
+      "keywords": [
+        "face in clouds",
+        "symbols",
+        "face",
+        "clouds"
+      ],
+      "description": "The face in clouds emoji represents face in clouds, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F636-200D-1F32B-FE0F.svg",
+      "pngPath": "/emojis/blue-png/1F636-200D-1F32B-FE0F-64.png"
+    },
+    {
+      "id": "smirking-face",
+      "name": "smirking face",
+      "category": "symbols",
+      "unicode": "U+1F60F",
+      "emoji": "😏",
+      "keywords": [
+        "smirking face",
+        "symbols",
+        "smirking",
+        "face"
+      ],
+      "description": "The smirking face emoji represents smirking face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F60F.svg",
+      "pngPath": "/emojis/blue-png/1F60F-64.png"
+    },
+    {
+      "id": "unamused-face",
+      "name": "unamused face",
+      "category": "symbols",
+      "unicode": "U+1F612",
+      "emoji": "😒",
+      "keywords": [
+        "unamused face",
+        "symbols",
+        "unamused",
+        "face"
+      ],
+      "description": "The unamused face emoji represents unamused face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F612.svg",
+      "pngPath": "/emojis/blue-png/1F612-64.png"
+    },
+    {
+      "id": "face-with-rolling-eyes",
+      "name": "face with rolling eyes",
+      "category": "symbols",
+      "unicode": "U+1F644",
+      "emoji": "🙄",
+      "keywords": [
+        "face with rolling eyes",
+        "symbols",
+        "face",
+        "with",
+        "rolling",
+        "eyes"
+      ],
+      "description": "The face with rolling eyes emoji represents face with rolling eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F644.svg",
+      "pngPath": "/emojis/blue-png/1F644-64.png"
+    },
+    {
+      "id": "grimacing-face",
+      "name": "grimacing face",
+      "category": "symbols",
+      "unicode": "U+1F62C",
+      "emoji": "😬",
+      "keywords": [
+        "grimacing face",
+        "symbols",
+        "grimacing",
+        "face"
+      ],
+      "description": "The grimacing face emoji represents grimacing face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F62C.svg",
+      "pngPath": "/emojis/blue-png/1F62C-64.png"
+    },
+    {
+      "id": "face-exhaling",
+      "name": "face exhaling",
+      "category": "symbols",
+      "unicode": "U+1F62E+200D+1F4A8",
+      "emoji": "😮‍💨",
+      "keywords": [
+        "face exhaling",
+        "symbols",
+        "face",
+        "exhaling"
+      ],
+      "description": "The face exhaling emoji represents face exhaling, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F62E-200D-1F4A8.svg",
+      "pngPath": "/emojis/blue-png/1F62E-200D-1F4A8-64.png"
+    },
+    {
+      "id": "lying-face",
+      "name": "lying face",
+      "category": "symbols",
+      "unicode": "U+1F925",
+      "emoji": "🤥",
+      "keywords": [
+        "lying face",
+        "symbols",
+        "lying",
+        "face"
+      ],
+      "description": "The lying face emoji represents lying face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F925.svg",
+      "pngPath": "/emojis/blue-png/1F925-64.png"
+    },
+    {
+      "id": "shaking-face",
+      "name": "shaking face",
+      "category": "symbols",
+      "unicode": "U+1FAE8",
+      "emoji": "🫨",
+      "keywords": [
+        "shaking face",
+        "symbols",
+        "shaking",
+        "face"
+      ],
+      "description": "The shaking face emoji represents shaking face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FAE8.svg",
+      "pngPath": "/emojis/blue-png/1FAE8-64.png"
+    },
+    {
+      "id": "head-shaking-horizontally",
+      "name": "head shaking horizontally",
+      "category": "symbols",
+      "unicode": "U+1F642+200D+2194+FE0F",
+      "emoji": "🙂‍↔️",
+      "keywords": [
+        "head shaking horizontally",
+        "symbols",
+        "head",
+        "shaking",
+        "horizontally"
+      ],
+      "description": "The head shaking horizontally emoji represents head shaking horizontally, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F642-200D-2194-FE0F.svg",
+      "pngPath": "/emojis/blue-png/1F642-200D-2194-FE0F-64.png"
+    },
+    {
+      "id": "head-shaking-vertically",
+      "name": "head shaking vertically",
+      "category": "symbols",
+      "unicode": "U+1F642+200D+2195+FE0F",
+      "emoji": "🙂‍↕️",
+      "keywords": [
+        "head shaking vertically",
+        "symbols",
+        "head",
+        "shaking",
+        "vertically"
+      ],
+      "description": "The head shaking vertically emoji represents head shaking vertically, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F642-200D-2195-FE0F.svg",
+      "pngPath": "/emojis/blue-png/1F642-200D-2195-FE0F-64.png"
+    },
+    {
+      "id": "relieved-face",
+      "name": "relieved face",
+      "category": "symbols",
+      "unicode": "U+1F60C",
+      "emoji": "😌",
+      "keywords": [
+        "relieved face",
+        "symbols",
+        "relieved",
+        "face"
+      ],
+      "description": "The relieved face emoji represents relieved face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F60C.svg",
+      "pngPath": "/emojis/blue-png/1F60C-64.png"
+    },
+    {
+      "id": "pensive-face",
+      "name": "pensive face",
+      "category": "symbols",
+      "unicode": "U+1F614",
+      "emoji": "😔",
+      "keywords": [
+        "pensive face",
+        "symbols",
+        "pensive",
+        "face"
+      ],
+      "description": "The pensive face emoji represents pensive face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F614.svg",
+      "pngPath": "/emojis/blue-png/1F614-64.png"
+    },
+    {
+      "id": "sleepy-face",
+      "name": "sleepy face",
+      "category": "symbols",
+      "unicode": "U+1F62A",
+      "emoji": "😪",
+      "keywords": [
+        "sleepy face",
+        "symbols",
+        "sleepy",
+        "face"
+      ],
+      "description": "The sleepy face emoji represents sleepy face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F62A.svg",
+      "pngPath": "/emojis/blue-png/1F62A-64.png"
+    },
+    {
+      "id": "drooling-face",
+      "name": "drooling face",
+      "category": "symbols",
+      "unicode": "U+1F924",
+      "emoji": "🤤",
+      "keywords": [
+        "drooling face",
+        "symbols",
+        "drooling",
+        "face"
+      ],
+      "description": "The drooling face emoji represents drooling face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F924.svg",
+      "pngPath": "/emojis/blue-png/1F924-64.png"
+    },
+    {
+      "id": "sleeping-face",
+      "name": "sleeping face",
+      "category": "symbols",
+      "unicode": "U+1F634",
+      "emoji": "😴",
+      "keywords": [
+        "sleeping face",
+        "symbols",
+        "sleeping",
+        "face"
+      ],
+      "description": "The sleeping face emoji represents sleeping face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F634.svg",
+      "pngPath": "/emojis/blue-png/1F634-64.png"
+    },
+    {
+      "id": "face-with-bags-under-eyes",
+      "name": "face with bags under eyes",
+      "category": "symbols",
+      "unicode": "U+1FAE9",
+      "emoji": "🫩",
+      "keywords": [
+        "face with bags under eyes",
+        "symbols",
+        "face",
+        "with",
+        "bags",
+        "under",
+        "eyes"
+      ],
+      "description": "The face with bags under eyes emoji represents face with bags under eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FAE9.svg",
+      "pngPath": "/emojis/blue-png/1FAE9-64.png"
+    },
+    {
+      "id": "face-with-medical-mask",
+      "name": "face with medical mask",
+      "category": "symbols",
+      "unicode": "U+1F637",
+      "emoji": "😷",
+      "keywords": [
+        "face with medical mask",
+        "symbols",
+        "face",
+        "with",
+        "medical",
+        "mask"
+      ],
+      "description": "The face with medical mask emoji represents face with medical mask, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F637.svg",
+      "pngPath": "/emojis/blue-png/1F637-64.png"
+    },
+    {
+      "id": "face-with-thermometer",
+      "name": "face with thermometer",
+      "category": "symbols",
+      "unicode": "U+1F912",
+      "emoji": "🤒",
+      "keywords": [
+        "face with thermometer",
+        "symbols",
+        "face",
+        "with",
+        "thermometer"
+      ],
+      "description": "The face with thermometer emoji represents face with thermometer, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F912.svg",
+      "pngPath": "/emojis/blue-png/1F912-64.png"
+    },
+    {
+      "id": "face-with-head-bandage",
+      "name": "face with head-bandage",
+      "category": "symbols",
+      "unicode": "U+1F915",
+      "emoji": "🤕",
+      "keywords": [
+        "face with head bandage",
+        "symbols",
+        "face",
+        "with",
+        "head-bandage"
+      ],
+      "description": "The face with head-bandage emoji represents face with head-bandage, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F915.svg",
+      "pngPath": "/emojis/blue-png/1F915-64.png"
+    },
+    {
+      "id": "nauseated-face",
+      "name": "nauseated face",
+      "category": "symbols",
+      "unicode": "U+1F922",
+      "emoji": "🤢",
+      "keywords": [
+        "nauseated face",
+        "symbols",
+        "nauseated",
+        "face"
+      ],
+      "description": "The nauseated face emoji represents nauseated face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F922.svg",
+      "pngPath": "/emojis/blue-png/1F922-64.png"
+    },
+    {
+      "id": "face-vomiting",
+      "name": "face vomiting",
+      "category": "symbols",
+      "unicode": "U+1F92E",
+      "emoji": "🤮",
+      "keywords": [
+        "face vomiting",
+        "symbols",
+        "face",
+        "vomiting"
+      ],
+      "description": "The face vomiting emoji represents face vomiting, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F92E.svg",
+      "pngPath": "/emojis/blue-png/1F92E-64.png"
+    },
+    {
+      "id": "sneezing-face",
+      "name": "sneezing face",
+      "category": "symbols",
+      "unicode": "U+1F927",
+      "emoji": "🤧",
+      "keywords": [
+        "sneezing face",
+        "symbols",
+        "sneezing",
+        "face"
+      ],
+      "description": "The sneezing face emoji represents sneezing face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F927.svg",
+      "pngPath": "/emojis/blue-png/1F927-64.png"
+    },
+    {
+      "id": "hot-face",
+      "name": "hot face",
+      "category": "symbols",
+      "unicode": "U+1F975",
+      "emoji": "🥵",
+      "keywords": [
+        "hot face",
+        "symbols",
+        "hot",
+        "face"
+      ],
+      "description": "The hot face emoji represents hot face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F975.svg",
+      "pngPath": "/emojis/blue-png/1F975-64.png"
+    },
+    {
+      "id": "cold-face",
+      "name": "cold face",
+      "category": "symbols",
+      "unicode": "U+1F976",
+      "emoji": "🥶",
+      "keywords": [
+        "cold face",
+        "symbols",
+        "cold",
+        "face"
+      ],
+      "description": "The cold face emoji represents cold face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F976.svg",
+      "pngPath": "/emojis/blue-png/1F976-64.png"
+    },
+    {
+      "id": "woozy-face",
+      "name": "woozy face",
+      "category": "symbols",
+      "unicode": "U+1F974",
+      "emoji": "🥴",
+      "keywords": [
+        "woozy face",
+        "symbols",
+        "woozy",
+        "face"
+      ],
+      "description": "The woozy face emoji represents woozy face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F974.svg",
+      "pngPath": "/emojis/blue-png/1F974-64.png"
+    },
+    {
+      "id": "face-with-crossed-out-eyes",
+      "name": "face with crossed-out eyes",
+      "category": "symbols",
+      "unicode": "U+1F635",
+      "emoji": "😵",
+      "keywords": [
+        "face with crossed out eyes",
+        "symbols",
+        "face",
+        "with",
+        "crossed-out",
+        "eyes"
+      ],
+      "description": "The face with crossed-out eyes emoji represents face with crossed-out eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F635.svg",
+      "pngPath": "/emojis/blue-png/1F635-64.png"
+    },
+    {
+      "id": "face-with-spiral-eyes",
+      "name": "face with spiral eyes",
+      "category": "symbols",
+      "unicode": "U+1F635+200D+1F4AB",
+      "emoji": "😵‍💫",
+      "keywords": [
+        "face with spiral eyes",
+        "symbols",
+        "face",
+        "with",
+        "spiral",
+        "eyes"
+      ],
+      "description": "The face with spiral eyes emoji represents face with spiral eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F635-200D-1F4AB.svg",
+      "pngPath": "/emojis/blue-png/1F635-200D-1F4AB-64.png"
+    },
+    {
+      "id": "exploding-head",
+      "name": "exploding head",
+      "category": "symbols",
+      "unicode": "U+1F92F",
+      "emoji": "🤯",
+      "keywords": [
+        "exploding head",
+        "symbols",
+        "exploding",
+        "head"
+      ],
+      "description": "The exploding head emoji represents exploding head, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F92F.svg",
+      "pngPath": "/emojis/blue-png/1F92F-64.png"
+    },
+    {
+      "id": "cowboy-hat-face",
+      "name": "cowboy hat face",
+      "category": "symbols",
+      "unicode": "U+1F920",
+      "emoji": "🤠",
+      "keywords": [
+        "cowboy hat face",
+        "symbols",
+        "cowboy",
+        "hat",
+        "face"
+      ],
+      "description": "The cowboy hat face emoji represents cowboy hat face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F920.svg",
+      "pngPath": "/emojis/blue-png/1F920-64.png"
+    },
+    {
+      "id": "partying-face",
+      "name": "partying face",
+      "category": "symbols",
+      "unicode": "U+1F973",
+      "emoji": "🥳",
+      "keywords": [
+        "partying face",
+        "symbols",
+        "partying",
+        "face"
+      ],
+      "description": "The partying face emoji represents partying face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F973.svg",
+      "pngPath": "/emojis/blue-png/1F973-64.png"
+    },
+    {
+      "id": "disguised-face",
+      "name": "disguised face",
+      "category": "symbols",
+      "unicode": "U+1F978",
+      "emoji": "🥸",
+      "keywords": [
+        "disguised face",
+        "symbols",
+        "disguised",
+        "face"
+      ],
+      "description": "The disguised face emoji represents disguised face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F978.svg",
+      "pngPath": "/emojis/blue-png/1F978-64.png"
+    },
+    {
+      "id": "smiling-face-with-sunglasses",
+      "name": "smiling face with sunglasses",
+      "category": "symbols",
+      "unicode": "U+1F60E",
+      "emoji": "😎",
+      "keywords": [
+        "smiling face with sunglasses",
+        "symbols",
+        "smiling",
+        "face",
+        "with",
+        "sunglasses"
+      ],
+      "description": "The smiling face with sunglasses emoji represents smiling face with sunglasses, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F60E.svg",
+      "pngPath": "/emojis/blue-png/1F60E-64.png"
+    },
+    {
+      "id": "nerd-face",
+      "name": "nerd face",
+      "category": "symbols",
+      "unicode": "U+1F913",
+      "emoji": "🤓",
+      "keywords": [
+        "nerd face",
+        "symbols",
+        "nerd",
+        "face"
+      ],
+      "description": "The nerd face emoji represents nerd face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F913.svg",
+      "pngPath": "/emojis/blue-png/1F913-64.png"
+    },
+    {
+      "id": "face-with-monocle",
+      "name": "face with monocle",
+      "category": "symbols",
+      "unicode": "U+1F9D0",
+      "emoji": "🧐",
+      "keywords": [
+        "face with monocle",
+        "symbols",
+        "face",
+        "with",
+        "monocle"
+      ],
+      "description": "The face with monocle emoji represents face with monocle, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F9D0.svg",
+      "pngPath": "/emojis/blue-png/1F9D0-64.png"
+    },
+    {
+      "id": "confused-face",
+      "name": "confused face",
+      "category": "symbols",
+      "unicode": "U+1F615",
+      "emoji": "😕",
+      "keywords": [
+        "confused face",
+        "symbols",
+        "confused",
+        "face"
+      ],
+      "description": "The confused face emoji represents confused face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F615.svg",
+      "pngPath": "/emojis/blue-png/1F615-64.png"
+    },
+    {
+      "id": "face-with-diagonal-mouth",
+      "name": "face with diagonal mouth",
+      "category": "symbols",
+      "unicode": "U+1FAE4",
+      "emoji": "🫤",
+      "keywords": [
+        "face with diagonal mouth",
+        "symbols",
+        "face",
+        "with",
+        "diagonal",
+        "mouth"
+      ],
+      "description": "The face with diagonal mouth emoji represents face with diagonal mouth, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FAE4.svg",
+      "pngPath": "/emojis/blue-png/1FAE4-64.png"
+    },
+    {
+      "id": "worried-face",
+      "name": "worried face",
+      "category": "symbols",
+      "unicode": "U+1F61F",
+      "emoji": "😟",
+      "keywords": [
+        "worried face",
+        "symbols",
+        "worried",
+        "face"
+      ],
+      "description": "The worried face emoji represents worried face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F61F.svg",
+      "pngPath": "/emojis/blue-png/1F61F-64.png"
+    },
+    {
+      "id": "slightly-frowning-face",
+      "name": "slightly frowning face",
+      "category": "symbols",
+      "unicode": "U+1F641",
+      "emoji": "🙁",
+      "keywords": [
+        "slightly frowning face",
+        "symbols",
+        "slightly",
+        "frowning",
+        "face"
+      ],
+      "description": "The slightly frowning face emoji represents slightly frowning face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F641.svg",
+      "pngPath": "/emojis/blue-png/1F641-64.png"
+    },
+    {
+      "id": "frowning-face",
+      "name": "frowning face",
+      "category": "symbols",
+      "unicode": "U+2639",
+      "emoji": "☹",
+      "keywords": [
+        "frowning face",
+        "symbols",
+        "frowning",
+        "face"
+      ],
+      "description": "The frowning face emoji represents frowning face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/2639.svg",
+      "pngPath": "/emojis/blue-png/2639-64.png"
+    },
+    {
+      "id": "face-with-open-mouth",
+      "name": "face with open mouth",
+      "category": "symbols",
+      "unicode": "U+1F62E",
+      "emoji": "😮",
+      "keywords": [
+        "face with open mouth",
+        "symbols",
+        "face",
+        "with",
+        "open",
+        "mouth"
+      ],
+      "description": "The face with open mouth emoji represents face with open mouth, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F62E.svg",
+      "pngPath": "/emojis/blue-png/1F62E-64.png"
+    },
+    {
+      "id": "hushed-face",
+      "name": "hushed face",
+      "category": "symbols",
+      "unicode": "U+1F62F",
+      "emoji": "😯",
+      "keywords": [
+        "hushed face",
+        "symbols",
+        "hushed",
+        "face"
+      ],
+      "description": "The hushed face emoji represents hushed face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F62F.svg",
+      "pngPath": "/emojis/blue-png/1F62F-64.png"
+    },
+    {
+      "id": "astonished-face",
+      "name": "astonished face",
+      "category": "symbols",
+      "unicode": "U+1F632",
+      "emoji": "😲",
+      "keywords": [
+        "astonished face",
+        "symbols",
+        "astonished",
+        "face"
+      ],
+      "description": "The astonished face emoji represents astonished face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F632.svg",
+      "pngPath": "/emojis/blue-png/1F632-64.png"
+    },
+    {
+      "id": "flushed-face",
+      "name": "flushed face",
+      "category": "symbols",
+      "unicode": "U+1F633",
+      "emoji": "😳",
+      "keywords": [
+        "flushed face",
+        "symbols",
+        "flushed",
+        "face"
+      ],
+      "description": "The flushed face emoji represents flushed face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F633.svg",
+      "pngPath": "/emojis/blue-png/1F633-64.png"
+    },
+    {
+      "id": "pleading-face",
+      "name": "pleading face",
+      "category": "symbols",
+      "unicode": "U+1F97A",
+      "emoji": "🥺",
+      "keywords": [
+        "pleading face",
+        "symbols",
+        "pleading",
+        "face"
+      ],
+      "description": "The pleading face emoji represents pleading face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F97A.svg",
+      "pngPath": "/emojis/blue-png/1F97A-64.png"
+    },
+    {
+      "id": "face-holding-back-tears",
+      "name": "face holding back tears",
+      "category": "symbols",
+      "unicode": "U+1F979",
+      "emoji": "🥹",
+      "keywords": [
+        "face holding back tears",
+        "symbols",
+        "face",
+        "holding",
+        "back",
+        "tears"
+      ],
+      "description": "The face holding back tears emoji represents face holding back tears, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F979.svg",
+      "pngPath": "/emojis/blue-png/1F979-64.png"
+    },
+    {
+      "id": "frowning-face-with-open-mouth",
+      "name": "frowning face with open mouth",
+      "category": "symbols",
+      "unicode": "U+1F626",
+      "emoji": "😦",
+      "keywords": [
+        "frowning face with open mouth",
+        "symbols",
+        "frowning",
+        "face",
+        "with",
+        "open",
+        "mouth"
+      ],
+      "description": "The frowning face with open mouth emoji represents frowning face with open mouth, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F626.svg",
+      "pngPath": "/emojis/blue-png/1F626-64.png"
+    },
+    {
+      "id": "anguished-face",
+      "name": "anguished face",
+      "category": "symbols",
+      "unicode": "U+1F627",
+      "emoji": "😧",
+      "keywords": [
+        "anguished face",
+        "symbols",
+        "anguished",
+        "face"
+      ],
+      "description": "The anguished face emoji represents anguished face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F627.svg",
+      "pngPath": "/emojis/blue-png/1F627-64.png"
+    },
+    {
+      "id": "fearful-face",
+      "name": "fearful face",
+      "category": "symbols",
+      "unicode": "U+1F628",
+      "emoji": "😨",
+      "keywords": [
+        "fearful face",
+        "symbols",
+        "fearful",
+        "face"
+      ],
+      "description": "The fearful face emoji represents fearful face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F628.svg",
+      "pngPath": "/emojis/blue-png/1F628-64.png"
+    },
+    {
+      "id": "anxious-face-with-sweat",
+      "name": "anxious face with sweat",
+      "category": "symbols",
+      "unicode": "U+1F630",
+      "emoji": "😰",
+      "keywords": [
+        "anxious face with sweat",
+        "symbols",
+        "anxious",
+        "face",
+        "with",
+        "sweat"
+      ],
+      "description": "The anxious face with sweat emoji represents anxious face with sweat, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F630.svg",
+      "pngPath": "/emojis/blue-png/1F630-64.png"
+    },
+    {
+      "id": "sad-but-relieved-face",
+      "name": "sad but relieved face",
+      "category": "symbols",
+      "unicode": "U+1F625",
+      "emoji": "😥",
+      "keywords": [
+        "sad but relieved face",
+        "symbols",
+        "sad",
+        "but",
+        "relieved",
+        "face"
+      ],
+      "description": "The sad but relieved face emoji represents sad but relieved face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F625.svg",
+      "pngPath": "/emojis/blue-png/1F625-64.png"
+    },
+    {
+      "id": "crying-face",
+      "name": "crying face",
+      "category": "symbols",
+      "unicode": "U+1F622",
+      "emoji": "😢",
+      "keywords": [
+        "crying face",
+        "symbols",
+        "crying",
+        "face"
+      ],
+      "description": "The crying face emoji represents crying face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F622.svg",
+      "pngPath": "/emojis/blue-png/1F622-64.png"
+    },
+    {
+      "id": "loudly-crying-face",
+      "name": "loudly crying face",
+      "category": "symbols",
+      "unicode": "U+1F62D",
+      "emoji": "😭",
+      "keywords": [
+        "loudly crying face",
+        "symbols",
+        "loudly",
+        "crying",
+        "face"
+      ],
+      "description": "The loudly crying face emoji represents loudly crying face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F62D.svg",
+      "pngPath": "/emojis/blue-png/1F62D-64.png"
+    },
+    {
+      "id": "face-screaming-in-fear",
+      "name": "face screaming in fear",
+      "category": "symbols",
+      "unicode": "U+1F631",
+      "emoji": "😱",
+      "keywords": [
+        "face screaming in fear",
+        "symbols",
+        "face",
+        "screaming",
+        "fear"
+      ],
+      "description": "The face screaming in fear emoji represents face screaming in fear, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F631.svg",
+      "pngPath": "/emojis/blue-png/1F631-64.png"
+    },
+    {
+      "id": "confounded-face",
+      "name": "confounded face",
+      "category": "symbols",
+      "unicode": "U+1F616",
+      "emoji": "😖",
+      "keywords": [
+        "confounded face",
+        "symbols",
+        "confounded",
+        "face"
+      ],
+      "description": "The confounded face emoji represents confounded face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F616.svg",
+      "pngPath": "/emojis/blue-png/1F616-64.png"
+    },
+    {
+      "id": "persevering-face",
+      "name": "persevering face",
+      "category": "symbols",
+      "unicode": "U+1F623",
+      "emoji": "😣",
+      "keywords": [
+        "persevering face",
+        "symbols",
+        "persevering",
+        "face"
+      ],
+      "description": "The persevering face emoji represents persevering face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F623.svg",
+      "pngPath": "/emojis/blue-png/1F623-64.png"
+    },
+    {
+      "id": "disappointed-face",
+      "name": "disappointed face",
+      "category": "symbols",
+      "unicode": "U+1F61E",
+      "emoji": "😞",
+      "keywords": [
+        "disappointed face",
+        "symbols",
+        "disappointed",
+        "face"
+      ],
+      "description": "The disappointed face emoji represents disappointed face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F61E.svg",
+      "pngPath": "/emojis/blue-png/1F61E-64.png"
+    },
+    {
+      "id": "downcast-face-with-sweat",
+      "name": "downcast face with sweat",
+      "category": "symbols",
+      "unicode": "U+1F613",
+      "emoji": "😓",
+      "keywords": [
+        "downcast face with sweat",
+        "symbols",
+        "downcast",
+        "face",
+        "with",
+        "sweat"
+      ],
+      "description": "The downcast face with sweat emoji represents downcast face with sweat, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F613.svg",
+      "pngPath": "/emojis/blue-png/1F613-64.png"
+    },
+    {
+      "id": "weary-face",
+      "name": "weary face",
+      "category": "symbols",
+      "unicode": "U+1F629",
+      "emoji": "😩",
+      "keywords": [
+        "weary face",
+        "symbols",
+        "weary",
+        "face"
+      ],
+      "description": "The weary face emoji represents weary face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F629.svg",
+      "pngPath": "/emojis/blue-png/1F629-64.png"
+    },
+    {
+      "id": "tired-face",
+      "name": "tired face",
+      "category": "symbols",
+      "unicode": "U+1F62B",
+      "emoji": "😫",
+      "keywords": [
+        "tired face",
+        "symbols",
+        "tired",
+        "face"
+      ],
+      "description": "The tired face emoji represents tired face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F62B.svg",
+      "pngPath": "/emojis/blue-png/1F62B-64.png"
+    },
+    {
+      "id": "yawning-face",
+      "name": "yawning face",
+      "category": "symbols",
+      "unicode": "U+1F971",
+      "emoji": "🥱",
+      "keywords": [
+        "yawning face",
+        "symbols",
+        "yawning",
+        "face"
+      ],
+      "description": "The yawning face emoji represents yawning face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F971.svg",
+      "pngPath": "/emojis/blue-png/1F971-64.png"
+    },
+    {
+      "id": "face-with-steam-from-nose",
+      "name": "face with steam from nose",
+      "category": "symbols",
+      "unicode": "U+1F624",
+      "emoji": "😤",
+      "keywords": [
+        "face with steam from nose",
+        "symbols",
+        "face",
+        "with",
+        "steam",
+        "from",
+        "nose"
+      ],
+      "description": "The face with steam from nose emoji represents face with steam from nose, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F624.svg",
+      "pngPath": "/emojis/blue-png/1F624-64.png"
+    },
+    {
+      "id": "enraged-face",
+      "name": "enraged face",
+      "category": "symbols",
+      "unicode": "U+1F621",
+      "emoji": "😡",
+      "keywords": [
+        "enraged face",
+        "symbols",
+        "enraged",
+        "face"
+      ],
+      "description": "The enraged face emoji represents enraged face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F621.svg",
+      "pngPath": "/emojis/blue-png/1F621-64.png"
+    },
+    {
+      "id": "angry-face",
+      "name": "angry face",
+      "category": "symbols",
+      "unicode": "U+1F620",
+      "emoji": "😠",
+      "keywords": [
+        "angry face",
+        "symbols",
+        "angry",
+        "face"
+      ],
+      "description": "The angry face emoji represents angry face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F620.svg",
+      "pngPath": "/emojis/blue-png/1F620-64.png"
+    },
+    {
+      "id": "face-with-symbols-on-mouth",
+      "name": "face with symbols on mouth",
+      "category": "symbols",
+      "unicode": "U+1F92C",
+      "emoji": "🤬",
+      "keywords": [
+        "face with symbols on mouth",
+        "symbols",
+        "face",
+        "with",
+        "symbols",
+        "mouth"
+      ],
+      "description": "The face with symbols on mouth emoji represents face with symbols on mouth, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F92C.svg",
+      "pngPath": "/emojis/blue-png/1F92C-64.png"
+    },
+    {
+      "id": "smiling-face-with-horns",
+      "name": "smiling face with horns",
+      "category": "symbols",
+      "unicode": "U+1F608",
+      "emoji": "😈",
+      "keywords": [
+        "smiling face with horns",
+        "symbols",
+        "smiling",
+        "face",
+        "with",
+        "horns"
+      ],
+      "description": "The smiling face with horns emoji represents smiling face with horns, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F608.svg",
+      "pngPath": "/emojis/blue-png/1F608-64.png"
+    },
+    {
+      "id": "angry-face-with-horns",
+      "name": "angry face with horns",
+      "category": "symbols",
+      "unicode": "U+1F47F",
+      "emoji": "👿",
+      "keywords": [
+        "angry face with horns",
+        "symbols",
+        "angry",
+        "face",
+        "with",
+        "horns"
+      ],
+      "description": "The angry face with horns emoji represents angry face with horns, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F47F.svg",
+      "pngPath": "/emojis/blue-png/1F47F-64.png"
+    },
+    {
+      "id": "skull",
+      "name": "skull",
+      "category": "symbols",
+      "unicode": "U+1F480",
+      "emoji": "💀",
+      "keywords": [
+        "skull",
+        "symbols",
+        "skull"
+      ],
+      "description": "The skull emoji represents skull, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F480.svg",
+      "pngPath": "/emojis/blue-png/1F480-64.png"
+    },
+    {
+      "id": "skull-and-crossbones",
+      "name": "skull and crossbones",
+      "category": "symbols",
+      "unicode": "U+2620",
+      "emoji": "☠",
+      "keywords": [
+        "skull and crossbones",
+        "symbols",
+        "skull",
+        "and",
+        "crossbones"
+      ],
+      "description": "The skull and crossbones emoji represents skull and crossbones, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/2620.svg",
+      "pngPath": "/emojis/blue-png/2620-64.png"
+    },
+    {
+      "id": "pile-of-poo",
+      "name": "pile of poo",
+      "category": "symbols",
+      "unicode": "U+1F4A9",
+      "emoji": "💩",
+      "keywords": [
+        "pile of poo",
+        "symbols",
+        "pile",
+        "poo"
+      ],
+      "description": "The pile of poo emoji represents pile of poo, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4A9.svg",
+      "pngPath": "/emojis/blue-png/1F4A9-64.png"
+    },
+    {
+      "id": "clown-face",
+      "name": "clown face",
+      "category": "symbols",
+      "unicode": "U+1F921",
+      "emoji": "🤡",
+      "keywords": [
+        "clown face",
+        "symbols",
+        "clown",
+        "face"
+      ],
+      "description": "The clown face emoji represents clown face, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F921.svg",
+      "pngPath": "/emojis/blue-png/1F921-64.png"
+    },
+    {
+      "id": "ogre",
+      "name": "ogre",
+      "category": "symbols",
+      "unicode": "U+1F479",
+      "emoji": "👹",
+      "keywords": [
+        "ogre",
+        "symbols",
+        "ogre"
+      ],
+      "description": "The ogre emoji represents ogre, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F479.svg",
+      "pngPath": "/emojis/blue-png/1F479-64.png"
+    },
+    {
+      "id": "goblin",
+      "name": "goblin",
+      "category": "symbols",
+      "unicode": "U+1F47A",
+      "emoji": "👺",
+      "keywords": [
+        "goblin",
+        "symbols",
+        "goblin"
+      ],
+      "description": "The goblin emoji represents goblin, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F47A.svg",
+      "pngPath": "/emojis/blue-png/1F47A-64.png"
+    },
+    {
+      "id": "ghost",
+      "name": "ghost",
+      "category": "symbols",
+      "unicode": "U+1F47B",
+      "emoji": "👻",
+      "keywords": [
+        "ghost",
+        "symbols",
+        "ghost"
+      ],
+      "description": "The ghost emoji represents ghost, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F47B.svg",
+      "pngPath": "/emojis/blue-png/1F47B-64.png"
+    },
+    {
+      "id": "alien",
+      "name": "alien",
+      "category": "symbols",
+      "unicode": "U+1F47D",
+      "emoji": "👽",
+      "keywords": [
+        "alien",
+        "symbols",
+        "alien"
+      ],
+      "description": "The alien emoji represents alien, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F47D.svg",
+      "pngPath": "/emojis/blue-png/1F47D-64.png"
+    },
+    {
+      "id": "alien-monster",
+      "name": "alien monster",
+      "category": "symbols",
+      "unicode": "U+1F47E",
+      "emoji": "👾",
+      "keywords": [
+        "alien monster",
+        "symbols",
+        "alien",
+        "monster"
+      ],
+      "description": "The alien monster emoji represents alien monster, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F47E.svg",
+      "pngPath": "/emojis/blue-png/1F47E-64.png"
+    },
+    {
+      "id": "robot",
+      "name": "robot",
+      "category": "symbols",
+      "unicode": "U+1F916",
+      "emoji": "🤖",
+      "keywords": [
+        "robot",
+        "symbols",
+        "robot"
+      ],
+      "description": "The robot emoji represents robot, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F916.svg",
+      "pngPath": "/emojis/blue-png/1F916-64.png"
+    },
+    {
+      "id": "grinning-cat",
+      "name": "grinning cat",
+      "category": "symbols",
+      "unicode": "U+1F63A",
+      "emoji": "😺",
+      "keywords": [
+        "grinning cat",
+        "symbols",
+        "grinning",
+        "cat"
+      ],
+      "description": "The grinning cat emoji represents grinning cat, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F63A.svg",
+      "pngPath": "/emojis/blue-png/1F63A-64.png"
+    },
+    {
+      "id": "grinning-cat-with-smiling-eyes",
+      "name": "grinning cat with smiling eyes",
+      "category": "symbols",
+      "unicode": "U+1F638",
+      "emoji": "😸",
+      "keywords": [
+        "grinning cat with smiling eyes",
+        "symbols",
+        "grinning",
+        "cat",
+        "with",
+        "smiling",
+        "eyes"
+      ],
+      "description": "The grinning cat with smiling eyes emoji represents grinning cat with smiling eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F638.svg",
+      "pngPath": "/emojis/blue-png/1F638-64.png"
+    },
+    {
+      "id": "cat-with-tears-of-joy",
+      "name": "cat with tears of joy",
+      "category": "symbols",
+      "unicode": "U+1F639",
+      "emoji": "😹",
+      "keywords": [
+        "cat with tears of joy",
+        "symbols",
+        "cat",
+        "with",
+        "tears",
+        "joy"
+      ],
+      "description": "The cat with tears of joy emoji represents cat with tears of joy, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F639.svg",
+      "pngPath": "/emojis/blue-png/1F639-64.png"
+    },
+    {
+      "id": "smiling-cat-with-heart-eyes",
+      "name": "smiling cat with heart-eyes",
+      "category": "symbols",
+      "unicode": "U+1F63B",
+      "emoji": "😻",
+      "keywords": [
+        "smiling cat with heart eyes",
+        "symbols",
+        "smiling",
+        "cat",
+        "with",
+        "heart-eyes"
+      ],
+      "description": "The smiling cat with heart-eyes emoji represents smiling cat with heart-eyes, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F63B.svg",
+      "pngPath": "/emojis/blue-png/1F63B-64.png"
+    },
+    {
+      "id": "cat-with-wry-smile",
+      "name": "cat with wry smile",
+      "category": "symbols",
+      "unicode": "U+1F63C",
+      "emoji": "😼",
+      "keywords": [
+        "cat with wry smile",
+        "symbols",
+        "cat",
+        "with",
+        "wry",
+        "smile"
+      ],
+      "description": "The cat with wry smile emoji represents cat with wry smile, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F63C.svg",
+      "pngPath": "/emojis/blue-png/1F63C-64.png"
+    },
+    {
+      "id": "kissing-cat",
+      "name": "kissing cat",
+      "category": "symbols",
+      "unicode": "U+1F63D",
+      "emoji": "😽",
+      "keywords": [
+        "kissing cat",
+        "symbols",
+        "kissing",
+        "cat"
+      ],
+      "description": "The kissing cat emoji represents kissing cat, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F63D.svg",
+      "pngPath": "/emojis/blue-png/1F63D-64.png"
+    },
+    {
+      "id": "weary-cat",
+      "name": "weary cat",
+      "category": "symbols",
+      "unicode": "U+1F640",
+      "emoji": "🙀",
+      "keywords": [
+        "weary cat",
+        "symbols",
+        "weary",
+        "cat"
+      ],
+      "description": "The weary cat emoji represents weary cat, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F640.svg",
+      "pngPath": "/emojis/blue-png/1F640-64.png"
+    },
+    {
+      "id": "crying-cat",
+      "name": "crying cat",
+      "category": "symbols",
+      "unicode": "U+1F63F",
+      "emoji": "😿",
+      "keywords": [
+        "crying cat",
+        "symbols",
+        "crying",
+        "cat"
+      ],
+      "description": "The crying cat emoji represents crying cat, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F63F.svg",
+      "pngPath": "/emojis/blue-png/1F63F-64.png"
+    },
+    {
+      "id": "pouting-cat",
+      "name": "pouting cat",
+      "category": "symbols",
+      "unicode": "U+1F63E",
+      "emoji": "😾",
+      "keywords": [
+        "pouting cat",
+        "symbols",
+        "pouting",
+        "cat"
+      ],
+      "description": "The pouting cat emoji represents pouting cat, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F63E.svg",
+      "pngPath": "/emojis/blue-png/1F63E-64.png"
+    },
+    {
+      "id": "see-no-evil-monkey",
+      "name": "see-no-evil monkey",
+      "category": "symbols",
+      "unicode": "U+1F648",
+      "emoji": "🙈",
+      "keywords": [
+        "see no evil monkey",
+        "symbols",
+        "see-no-evil",
+        "monkey"
+      ],
+      "description": "The see-no-evil monkey emoji represents see-no-evil monkey, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F648.svg",
+      "pngPath": "/emojis/blue-png/1F648-64.png"
+    },
+    {
+      "id": "hear-no-evil-monkey",
+      "name": "hear-no-evil monkey",
+      "category": "symbols",
+      "unicode": "U+1F649",
+      "emoji": "🙉",
+      "keywords": [
+        "hear no evil monkey",
+        "symbols",
+        "hear-no-evil",
+        "monkey"
+      ],
+      "description": "The hear-no-evil monkey emoji represents hear-no-evil monkey, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F649.svg",
+      "pngPath": "/emojis/blue-png/1F649-64.png"
+    },
+    {
+      "id": "speak-no-evil-monkey",
+      "name": "speak-no-evil monkey",
+      "category": "symbols",
+      "unicode": "U+1F64A",
+      "emoji": "🙊",
+      "keywords": [
+        "speak no evil monkey",
+        "symbols",
+        "speak-no-evil",
+        "monkey"
+      ],
+      "description": "The speak-no-evil monkey emoji represents speak-no-evil monkey, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F64A.svg",
+      "pngPath": "/emojis/blue-png/1F64A-64.png"
+    },
+    {
+      "id": "love-letter",
+      "name": "love letter",
+      "category": "symbols",
+      "unicode": "U+1F48C",
+      "emoji": "💌",
+      "keywords": [
+        "love letter",
+        "symbols",
+        "love",
+        "letter"
+      ],
+      "description": "The love letter emoji represents love letter, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F48C.svg",
+      "pngPath": "/emojis/blue-png/1F48C-64.png"
+    },
+    {
+      "id": "heart-with-arrow",
+      "name": "heart with arrow",
+      "category": "symbols",
+      "unicode": "U+1F498",
+      "emoji": "💘",
+      "keywords": [
+        "heart with arrow",
+        "symbols",
+        "heart",
+        "with",
+        "arrow"
+      ],
+      "description": "The heart with arrow emoji represents heart with arrow, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F498.svg",
+      "pngPath": "/emojis/blue-png/1F498-64.png"
+    },
+    {
+      "id": "heart-with-ribbon",
+      "name": "heart with ribbon",
+      "category": "symbols",
+      "unicode": "U+1F49D",
+      "emoji": "💝",
+      "keywords": [
+        "heart with ribbon",
+        "symbols",
+        "heart",
+        "with",
+        "ribbon"
+      ],
+      "description": "The heart with ribbon emoji represents heart with ribbon, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F49D.svg",
+      "pngPath": "/emojis/blue-png/1F49D-64.png"
+    },
+    {
+      "id": "sparkling-heart",
+      "name": "sparkling heart",
+      "category": "symbols",
+      "unicode": "U+1F496",
+      "emoji": "💖",
+      "keywords": [
+        "sparkling heart",
+        "symbols",
+        "sparkling",
+        "heart"
+      ],
+      "description": "The sparkling heart emoji represents sparkling heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F496.svg",
+      "pngPath": "/emojis/blue-png/1F496-64.png"
+    },
+    {
+      "id": "growing-heart",
+      "name": "growing heart",
+      "category": "symbols",
+      "unicode": "U+1F497",
+      "emoji": "💗",
+      "keywords": [
+        "growing heart",
+        "symbols",
+        "growing",
+        "heart"
+      ],
+      "description": "The growing heart emoji represents growing heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F497.svg",
+      "pngPath": "/emojis/blue-png/1F497-64.png"
+    },
+    {
+      "id": "beating-heart",
+      "name": "beating heart",
+      "category": "symbols",
+      "unicode": "U+1F493",
+      "emoji": "💓",
+      "keywords": [
+        "beating heart",
+        "symbols",
+        "beating",
+        "heart"
+      ],
+      "description": "The beating heart emoji represents beating heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F493.svg",
+      "pngPath": "/emojis/blue-png/1F493-64.png"
+    },
+    {
+      "id": "revolving-hearts",
+      "name": "revolving hearts",
+      "category": "symbols",
+      "unicode": "U+1F49E",
+      "emoji": "💞",
+      "keywords": [
+        "revolving hearts",
+        "symbols",
+        "revolving",
+        "hearts"
+      ],
+      "description": "The revolving hearts emoji represents revolving hearts, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F49E.svg",
+      "pngPath": "/emojis/blue-png/1F49E-64.png"
+    },
+    {
+      "id": "two-hearts",
+      "name": "two hearts",
+      "category": "symbols",
+      "unicode": "U+1F495",
+      "emoji": "💕",
+      "keywords": [
+        "two hearts",
+        "symbols",
+        "two",
+        "hearts"
+      ],
+      "description": "The two hearts emoji represents two hearts, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F495.svg",
+      "pngPath": "/emojis/blue-png/1F495-64.png"
+    },
+    {
+      "id": "heart-decoration",
+      "name": "heart decoration",
+      "category": "symbols",
+      "unicode": "U+1F49F",
+      "emoji": "💟",
+      "keywords": [
+        "heart decoration",
+        "symbols",
+        "heart",
+        "decoration"
+      ],
+      "description": "The heart decoration emoji represents heart decoration, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F49F.svg",
+      "pngPath": "/emojis/blue-png/1F49F-64.png"
+    },
+    {
+      "id": "heart-exclamation",
+      "name": "heart exclamation",
+      "category": "symbols",
+      "unicode": "U+2763",
+      "emoji": "❣",
+      "keywords": [
+        "heart exclamation",
+        "symbols",
+        "heart",
+        "exclamation"
+      ],
+      "description": "The heart exclamation emoji represents heart exclamation, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/2763.svg",
+      "pngPath": "/emojis/blue-png/2763-64.png"
+    },
+    {
+      "id": "broken-heart",
+      "name": "broken heart",
+      "category": "symbols",
+      "unicode": "U+1F494",
+      "emoji": "💔",
+      "keywords": [
+        "broken heart",
+        "symbols",
+        "broken",
+        "heart"
+      ],
+      "description": "The broken heart emoji represents broken heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F494.svg",
+      "pngPath": "/emojis/blue-png/1F494-64.png"
+    },
+    {
+      "id": "heart-on-fire",
+      "name": "heart on fire",
+      "category": "symbols",
+      "unicode": "U+2764+FE0F+200D+1F525",
+      "emoji": "❤️‍🔥",
+      "keywords": [
+        "heart on fire",
+        "symbols",
+        "heart",
+        "fire"
+      ],
+      "description": "The heart on fire emoji represents heart on fire, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/2764-FE0F-200D-1F525.svg",
+      "pngPath": "/emojis/blue-png/2764-FE0F-200D-1F525-64.png"
+    },
+    {
+      "id": "mending-heart",
+      "name": "mending heart",
+      "category": "symbols",
+      "unicode": "U+2764+FE0F+200D+1FA79",
+      "emoji": "❤️‍🩹",
+      "keywords": [
+        "mending heart",
+        "symbols",
+        "mending",
+        "heart"
+      ],
+      "description": "The mending heart emoji represents mending heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/2764-FE0F-200D-1FA79.svg",
+      "pngPath": "/emojis/blue-png/2764-FE0F-200D-1FA79-64.png"
+    },
+    {
+      "id": "red-heart",
+      "name": "red heart",
+      "category": "symbols",
+      "unicode": "U+2764",
+      "emoji": "❤",
+      "keywords": [
+        "red heart",
+        "symbols",
+        "red",
+        "heart"
+      ],
+      "description": "The red heart emoji represents red heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/2764.svg",
+      "pngPath": "/emojis/blue-png/2764-64.png"
+    },
+    {
+      "id": "pink-heart",
+      "name": "pink heart",
+      "category": "symbols",
+      "unicode": "U+1FA77",
+      "emoji": "🩷",
+      "keywords": [
+        "pink heart",
+        "symbols",
+        "pink",
+        "heart"
+      ],
+      "description": "The pink heart emoji represents pink heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FA77.svg",
+      "pngPath": "/emojis/blue-png/1FA77-64.png"
+    },
+    {
+      "id": "orange-heart",
+      "name": "orange heart",
+      "category": "symbols",
+      "unicode": "U+1F9E1",
+      "emoji": "🧡",
+      "keywords": [
+        "orange heart",
+        "symbols",
+        "orange",
+        "heart"
+      ],
+      "description": "The orange heart emoji represents orange heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F9E1.svg",
+      "pngPath": "/emojis/blue-png/1F9E1-64.png"
+    },
+    {
+      "id": "yellow-heart",
+      "name": "yellow heart",
+      "category": "symbols",
+      "unicode": "U+1F49B",
+      "emoji": "💛",
+      "keywords": [
+        "yellow heart",
+        "symbols",
+        "yellow",
+        "heart"
+      ],
+      "description": "The yellow heart emoji represents yellow heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F49B.svg",
+      "pngPath": "/emojis/blue-png/1F49B-64.png"
+    },
+    {
+      "id": "green-heart",
+      "name": "green heart",
+      "category": "symbols",
+      "unicode": "U+1F49A",
+      "emoji": "💚",
+      "keywords": [
+        "green heart",
+        "symbols",
+        "green",
+        "heart"
+      ],
+      "description": "The green heart emoji represents green heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F49A.svg",
+      "pngPath": "/emojis/blue-png/1F49A-64.png"
+    },
+    {
       "id": "blue-heart",
       "name": "blue heart",
       "category": "symbols",
@@ -13,177 +2488,335 @@
         "heart"
       ],
       "description": "The Blue Heart emoji represents affection, support, and deep platonic love. It is often associated with trust, serenity, and loyalty.",
-      "svgPath": "/emojis/blue-svg/1F499.svg",
+      "svgPath": "/emojis/blue-svg-smileys/1F499.svg",
       "pngPath": "/emojis/blue-png/1F499-64.png"
     },
     {
-      "id": "blue-circle",
-      "name": "blue circle",
+      "id": "light-blue-heart",
+      "name": "light blue heart",
       "category": "symbols",
-      "unicode": "U+1F535",
-      "emoji": "🔵",
+      "unicode": "U+1FA75",
+      "emoji": "🩵",
       "keywords": [
-        "blue circle",
+        "light blue heart",
         "symbols",
+        "light",
         "blue",
-        "circle"
+        "heart"
       ],
-      "description": "A solid blue circle, often used to represent the color blue or circular objects.",
-      "svgPath": "/emojis/blue-svg/1F535.svg",
-      "pngPath": "/emojis/blue-png/1F535-64.png"
+      "description": "The light blue heart emoji represents light blue heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FA75.svg",
+      "pngPath": "/emojis/blue-png/1FA75-64.png"
     },
     {
-      "id": "water-wave",
-      "name": "water wave",
-      "category": "travel-places",
-      "unicode": "U+1F30A",
-      "emoji": "🌊",
-      "keywords": [
-        "water wave",
-        "travel places",
-        "water",
-        "wave"
-      ],
-      "description": "A wave of water, representing the ocean, sea, or water in general.",
-      "svgPath": "/emojis/blue-svg/1F30A.svg",
-      "pngPath": "/emojis/blue-png/1F30A-64.png"
-    },
-    {
-      "id": "droplet",
-      "name": "droplet",
+      "id": "purple-heart",
+      "name": "purple heart",
       "category": "symbols",
-      "unicode": "U+1F4A7",
-      "emoji": "💧",
+      "unicode": "U+1F49C",
+      "emoji": "💜",
       "keywords": [
-        "droplet",
+        "purple heart",
         "symbols",
-        "droplet"
+        "purple",
+        "heart"
       ],
-      "description": "A single droplet of water, representing moisture, rain, or small amounts of liquid.",
-      "svgPath": "/emojis/blue-svg/1F4A7.svg",
-      "pngPath": "/emojis/blue-png/1F4A7-64.png"
+      "description": "The purple heart emoji represents purple heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F49C.svg",
+      "pngPath": "/emojis/blue-png/1F49C-64.png"
     },
     {
-      "id": "blue-book",
-      "name": "blue book",
-      "category": "objects",
-      "unicode": "U+1F4D8",
-      "emoji": "📘",
-      "keywords": [
-        "blue book",
-        "objects",
-        "blue",
-        "book"
-      ],
-      "description": "The blue book emoji represents blue book, part of our blue-themed emoji collection.",
-      "svgPath": "/emojis/blue-svg/1F4D8.svg",
-      "pngPath": "/emojis/blue-png/1F4D8-64.png"
-    },
-    {
-      "id": "gem-stone",
-      "name": "gem stone",
-      "category": "objects",
-      "unicode": "U+1F48E",
-      "emoji": "💎",
-      "keywords": [
-        "gem stone",
-        "objects",
-        "gem",
-        "stone"
-      ],
-      "description": "A precious gem stone, representing value, beauty, and rarity.",
-      "svgPath": "/emojis/blue-svg/1F48E.svg",
-      "pngPath": "/emojis/blue-png/1F48E-64.png"
-    },
-    {
-      "id": "cloud-with-rain",
-      "name": "cloud with rain",
+      "id": "brown-heart",
+      "name": "brown heart",
       "category": "symbols",
-      "unicode": "U+1F327",
-      "emoji": "🌧",
+      "unicode": "U+1F90E",
+      "emoji": "🤎",
       "keywords": [
-        "cloud with rain",
+        "brown heart",
         "symbols",
-        "cloud",
-        "with",
-        "rain"
+        "brown",
+        "heart"
       ],
-      "description": "The cloud with rain emoji represents cloud with rain, part of our blue-themed emoji collection.",
-      "svgPath": "/emojis/blue-svg/1F327.svg",
-      "pngPath": "/emojis/blue-png/1F327-64.png"
+      "description": "The brown heart emoji represents brown heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F90E.svg",
+      "pngPath": "/emojis/blue-png/1F90E-64.png"
     },
     {
-      "id": "sleeping-face",
-      "name": "sleeping face",
-      "category": "smileys-emotion",
+      "id": "black-heart",
+      "name": "black heart",
+      "category": "symbols",
+      "unicode": "U+1F5A4",
+      "emoji": "🖤",
+      "keywords": [
+        "black heart",
+        "symbols",
+        "black",
+        "heart"
+      ],
+      "description": "The black heart emoji represents black heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F5A4.svg",
+      "pngPath": "/emojis/blue-png/1F5A4-64.png"
+    },
+    {
+      "id": "grey-heart",
+      "name": "grey heart",
+      "category": "symbols",
+      "unicode": "U+1FA76",
+      "emoji": "🩶",
+      "keywords": [
+        "grey heart",
+        "symbols",
+        "grey",
+        "heart"
+      ],
+      "description": "The grey heart emoji represents grey heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1FA76.svg",
+      "pngPath": "/emojis/blue-png/1FA76-64.png"
+    },
+    {
+      "id": "white-heart",
+      "name": "white heart",
+      "category": "symbols",
+      "unicode": "U+1F90D",
+      "emoji": "🤍",
+      "keywords": [
+        "white heart",
+        "symbols",
+        "white",
+        "heart"
+      ],
+      "description": "The white heart emoji represents white heart, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F90D.svg",
+      "pngPath": "/emojis/blue-png/1F90D-64.png"
+    },
+    {
+      "id": "kiss-mark",
+      "name": "kiss mark",
+      "category": "symbols",
+      "unicode": "U+1F48B",
+      "emoji": "💋",
+      "keywords": [
+        "kiss mark",
+        "symbols",
+        "kiss",
+        "mark"
+      ],
+      "description": "The kiss mark emoji represents kiss mark, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F48B.svg",
+      "pngPath": "/emojis/blue-png/1F48B-64.png"
+    },
+    {
+      "id": "hundred-points",
+      "name": "hundred points",
+      "category": "symbols",
+      "unicode": "U+1F4AF",
+      "emoji": "💯",
+      "keywords": [
+        "hundred points",
+        "symbols",
+        "hundred",
+        "points"
+      ],
+      "description": "The hundred points emoji represents hundred points, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4AF.svg",
+      "pngPath": "/emojis/blue-png/1F4AF-64.png"
+    },
+    {
+      "id": "anger-symbol",
+      "name": "anger symbol",
+      "category": "symbols",
+      "unicode": "U+1F4A2",
+      "emoji": "💢",
+      "keywords": [
+        "anger symbol",
+        "symbols",
+        "anger",
+        "symbol"
+      ],
+      "description": "The anger symbol emoji represents anger symbol, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4A2.svg",
+      "pngPath": "/emojis/blue-png/1F4A2-64.png"
+    },
+    {
+      "id": "collision",
+      "name": "collision",
+      "category": "symbols",
+      "unicode": "U+1F4A5",
+      "emoji": "💥",
+      "keywords": [
+        "collision",
+        "symbols",
+        "collision"
+      ],
+      "description": "The collision emoji represents collision, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4A5.svg",
+      "pngPath": "/emojis/blue-png/1F4A5-64.png"
+    },
+    {
+      "id": "dizzy",
+      "name": "dizzy",
+      "category": "symbols",
+      "unicode": "U+1F4AB",
+      "emoji": "💫",
+      "keywords": [
+        "dizzy",
+        "symbols",
+        "dizzy"
+      ],
+      "description": "The dizzy emoji represents dizzy, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4AB.svg",
+      "pngPath": "/emojis/blue-png/1F4AB-64.png"
+    },
+    {
+      "id": "sweat-droplets",
+      "name": "sweat droplets",
+      "category": "symbols",
+      "unicode": "U+1F4A6",
+      "emoji": "💦",
+      "keywords": [
+        "sweat droplets",
+        "symbols",
+        "sweat",
+        "droplets"
+      ],
+      "description": "The sweat droplets emoji represents sweat droplets, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4A6.svg",
+      "pngPath": "/emojis/blue-png/1F4A6-64.png"
+    },
+    {
+      "id": "dashing-away",
+      "name": "dashing away",
+      "category": "symbols",
+      "unicode": "U+1F4A8",
+      "emoji": "💨",
+      "keywords": [
+        "dashing away",
+        "symbols",
+        "dashing",
+        "away"
+      ],
+      "description": "The dashing away emoji represents dashing away, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4A8.svg",
+      "pngPath": "/emojis/blue-png/1F4A8-64.png"
+    },
+    {
+      "id": "hole",
+      "name": "hole",
+      "category": "symbols",
+      "unicode": "U+1F573",
+      "emoji": "🕳",
+      "keywords": [
+        "hole",
+        "symbols",
+        "hole"
+      ],
+      "description": "The hole emoji represents hole, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F573.svg",
+      "pngPath": "/emojis/blue-png/1F573-64.png"
+    },
+    {
+      "id": "speech-balloon",
+      "name": "speech balloon",
+      "category": "symbols",
+      "unicode": "U+1F4AC",
+      "emoji": "💬",
+      "keywords": [
+        "speech balloon",
+        "symbols",
+        "speech",
+        "balloon"
+      ],
+      "description": "The speech balloon emoji represents speech balloon, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4AC.svg",
+      "pngPath": "/emojis/blue-png/1F4AC-64.png"
+    },
+    {
+      "id": "eye-in-speech-bubble",
+      "name": "eye in speech bubble",
+      "category": "symbols",
+      "unicode": "U+1F441+FE0F+200D+1F5E8+FE0F",
+      "emoji": "👁️‍🗨️",
+      "keywords": [
+        "eye in speech bubble",
+        "symbols",
+        "eye",
+        "speech",
+        "bubble"
+      ],
+      "description": "The eye in speech bubble emoji represents eye in speech bubble, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F441-FE0F-200D-1F5E8-FE0F.svg",
+      "pngPath": "/emojis/blue-png/1F441-FE0F-200D-1F5E8-FE0F-64.png"
+    },
+    {
+      "id": "left-speech-bubble",
+      "name": "left speech bubble",
+      "category": "symbols",
+      "unicode": "U+1F5E8",
+      "emoji": "🗨",
+      "keywords": [
+        "left speech bubble",
+        "symbols",
+        "left",
+        "speech",
+        "bubble"
+      ],
+      "description": "The left speech bubble emoji represents left speech bubble, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F5E8.svg",
+      "pngPath": "/emojis/blue-png/1F5E8-64.png"
+    },
+    {
+      "id": "right-anger-bubble",
+      "name": "right anger bubble",
+      "category": "symbols",
+      "unicode": "U+1F5EF",
+      "emoji": "🗯",
+      "keywords": [
+        "right anger bubble",
+        "symbols",
+        "right",
+        "anger",
+        "bubble"
+      ],
+      "description": "The right anger bubble emoji represents right anger bubble, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F5EF.svg",
+      "pngPath": "/emojis/blue-png/1F5EF-64.png"
+    },
+    {
+      "id": "thought-balloon",
+      "name": "thought balloon",
+      "category": "symbols",
+      "unicode": "U+1F4AD",
+      "emoji": "💭",
+      "keywords": [
+        "thought balloon",
+        "symbols",
+        "thought",
+        "balloon"
+      ],
+      "description": "The thought balloon emoji represents thought balloon, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4AD.svg",
+      "pngPath": "/emojis/blue-png/1F4AD-64.png"
+    },
+    {
+      "id": "zzz",
+      "name": "ZZZ",
+      "category": "symbols",
       "unicode": "U+1F4A4",
       "emoji": "💤",
       "keywords": [
-        "sleeping face",
-        "smileys emotion",
-        "sleeping",
-        "face"
+        "zzz",
+        "symbols",
+        "zzz"
       ],
-      "description": "The sleeping face emoji represents sleeping face, part of our blue-themed emoji collection.",
-      "svgPath": "/emojis/blue-svg/1F4A4.svg",
+      "description": "The ZZZ emoji represents zzz, part of our blue-themed emoji collection.",
+      "svgPath": "/emojis/blue-svg-smileys/1F4A4.svg",
       "pngPath": "/emojis/blue-png/1F4A4-64.png"
-    },
-    {
-      "id": "whale",
-      "name": "whale",
-      "category": "animals-nature",
-      "unicode": "U+1F40B",
-      "emoji": "🐋",
-      "keywords": [
-        "whale",
-        "animals nature",
-        "whale"
-      ],
-      "description": "The whale emoji represents whale, part of our blue-themed emoji collection.",
-      "svgPath": "/emojis/blue-svg/1F40B.svg",
-      "pngPath": "/emojis/blue-png/1F40B-64.png"
-    },
-    {
-      "id": "fish",
-      "name": "fish",
-      "category": "animals-nature",
-      "unicode": "U+1F41F",
-      "emoji": "🐟",
-      "keywords": [
-        "fish",
-        "animals nature",
-        "fish"
-      ],
-      "description": "The fish emoji represents fish, part of our blue-themed emoji collection.",
-      "svgPath": "/emojis/blue-svg/1F41F.svg",
-      "pngPath": "/emojis/blue-png/1F41F-64.png"
     }
   ],
   "categories": [
     {
-      "id": "smileys-emotion",
-      "name": "Smileys Emotion",
-      "count": 1
-    },
-    {
-      "id": "animals-nature",
-      "name": "Animals Nature",
-      "count": 2
-    },
-    {
-      "id": "travel-places",
-      "name": "Travel Places",
-      "count": 1
-    },
-    {
-      "id": "objects",
-      "name": "Objects",
-      "count": 2
-    },
-    {
       "id": "symbols",
       "name": "Symbols",
-      "count": 4
+      "count": 169
     }
   ]
 }
