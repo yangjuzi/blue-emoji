@@ -9,7 +9,7 @@ import Giscus from '@giscus/react';
 import { EmojiData } from '../../types';
 import emojiData from '../../data/list.json';
 
-interface EmojiDetailPageProps {}
+interface EmojiDetailPageProps { }
 
 const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
   const router = useRouter();
@@ -26,7 +26,7 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
 
       // 尝试查找 (使用您的 e.id === slug 逻辑)
       const foundEmoji = emojiData.emojis.find((e: EmojiData) => e.id === slug);
-      
+
       setEmoji(foundEmoji || null);
       console.log('3. Emoji Found Status:', !!foundEmoji);
     }
@@ -48,7 +48,7 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
 
   const copyHTML = () => {
     if (emoji) {
-      const html = `<span style="color:#2563eb; font-size:48px;">${emoji.emoji}</span>`;
+      const html = `<img src="${window.location.origin}${emoji.svgPath}" alt="${emoji.name} Blue Emoji" width="48" height="48" />`;
       navigator.clipboard.writeText(html);
       showMessageNotification('HTML Code Copied!');
     }
@@ -83,10 +83,11 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
   return (
     <>
       <Head>
-        <title>{emoji.emoji} {emoji.name} Details | blue-emoji.com</title>
+        <title> {emoji.name} Details | blue-emoji.com</title>
         <meta name="description" content={emoji.description || `Learn more about the ${emoji.name} emoji (${emoji.unicode})`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={emoji.pngPath} type="image/png" sizes="64x64" />
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
       </Head>
 
@@ -107,11 +108,11 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
           {/* Left Column: Emoji Display */}
           <div className="w-full md:w-1/3 flex flex-col items-center justify-center p-8 bg-blue-50 rounded-lg">
             <div className="text-[120px] md:text-[180px] leading-none text-blue-600 transition duration-500 hover:scale-105" aria-label={`${emoji.name} Emoji`}>
-              <img 
-                src={emoji.svgPath} 
-                alt={`${emoji.name} Blue Emoji`} 
-                className="w-full h-full object-contain"
-              />
+              <img
+                src={emoji.svgPath}
+                alt={`${emoji.name} Blue Emoji`}
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
 
@@ -180,7 +181,7 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href={emoji.pngPath || '#'}
-                  download
+                  download={`${emoji.id}.png`}
                   className="w-full py-3 px-4 bg-gray-700 text-white font-bold rounded-lg shadow-md hover:bg-gray-800 transition duration-150 flex items-center justify-center"
                 >
                   <i className="fas fa-download mr-2"></i> Download PNG (64px)

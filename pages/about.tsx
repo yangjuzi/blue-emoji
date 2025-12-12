@@ -90,12 +90,12 @@ const AboutPage: React.FC = () => {
             <p className="text-blue-800 mt-2">
               This means you are free to: <strong>use, share, and modify</strong> our Blue Emojis, but you must: <strong>credit the original authors (OpenMoji) and our modification, and release your contributions under the same CC BY-SA 4.0 license.</strong>
             </p>
-            <Link 
-                href="/download" 
-                className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-semibold transition"
+            <Link
+              href="/download"
+              className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-semibold transition"
             >
-                <i className="fas fa-hand-point-right mr-1"></i> Go to Download Full Resource Pack
-            </Link>
+              <i className="fas fa-hand-point-right mr-1"></i> Go to Download Full Resource Pack
+            </Link>
           </section>
         </div>
       </Layout>
