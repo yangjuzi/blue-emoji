@@ -213,7 +213,7 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
             repoId="R_kgDOQhFI6g"       // Replace with actual repo ID
             category="General"
             categoryId="DIC_kwDOQhFI6s4CztL7"  // Replace with actual category ID
-            mapping="specific"
+            mapping="pathname"
             term={emoji.id}
             theme="preferred_color_scheme"
             reactionsEnabled="1"
