@@ -83,7 +83,7 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
   return (
     <>
       <Head>
-        <title>{emoji.emoji} {emoji.name} Details | BlueEmoji.com</title>
+        <title>{emoji.emoji} {emoji.name} Details | blue-emoji.com</title>
         <meta name="description" content={emoji.description || `Learn more about the ${emoji.name} emoji (${emoji.unicode})`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -107,7 +107,11 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
           {/* Left Column: Emoji Display */}
           <div className="w-full md:w-1/3 flex flex-col items-center justify-center p-8 bg-blue-50 rounded-lg">
             <div className="text-[120px] md:text-[180px] leading-none text-blue-600 transition duration-500 hover:scale-105" aria-label={`${emoji.name} Emoji`}>
-              {emoji.emoji}
+              <img 
+                src={emoji.svgPath} 
+                alt={`${emoji.name} Blue Emoji`} 
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
 

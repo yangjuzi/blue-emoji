@@ -24,12 +24,6 @@ const HomePage: React.FC<HomePageProps> = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleEmojiClick = (emoji: EmojiData) => {
-    // In a real app, this would navigate to the detail page
-    console.log('Clicked emoji:', emoji);
-    // For now, show a message
-    //alert(`${emoji.name} details coming soon!`);
-  };
 
   return (
     <>
