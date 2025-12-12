@@ -209,10 +209,10 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
 
           {/* Giscus Comments */}
           <Giscus
-            repo="your-org/blue-emoji"  // Replace with actual repo
-            repoId="your-repo-id"       // Replace with actual repo ID
-            category="Emoji Comments"
-            categoryId="your-category-id"  // Replace with actual category ID
+            repo="yangjuzi/blue-emoji"  // Replace with actual repo
+            repoId="R_kgDOQhFI6g"       // Replace with actual repo ID
+            category="General"
+            categoryId="DIC_kwDOQhFI6s4CztL7"  // Replace with actual category ID
             mapping="specific"
             term={emoji.id}
             theme="preferred_color_scheme"
