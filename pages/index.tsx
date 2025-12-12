@@ -28,7 +28,7 @@ const HomePage: React.FC<HomePageProps> = () => {
     // In a real app, this would navigate to the detail page
     console.log('Clicked emoji:', emoji);
     // For now, show a message
-    alert(`${emoji.name} details coming soon!`);
+    //alert(`${emoji.name} details coming soon!`);
   };
 
   return (
@@ -99,7 +99,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                 <EmojiCard
                   key={emoji.id}
                   emoji={emoji}
-                  onClick={handleEmojiClick}
+                  //onClick={handleEmojiClick}
                 />
               ))}
             </div>

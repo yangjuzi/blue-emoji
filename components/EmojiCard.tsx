@@ -91,10 +91,9 @@ const cardContent = (
   } else {
     // 情况 2: 没有提供 onClick prop -> 渲染一个用于页面导航的 Next.js Link
     return (
-      <Link href={`/emoji/${emoji.id}`} passHref legacyBehavior>
-        <a className={cardClassName}>
-          {cardContent}
-        </a>
+      <Link href={`/emoji/${emoji.id}`} className={cardClassName}>
+        {/* <Link> 唯一的子元素就是 cardContent (它是一个 React Fragment <>...</>) */}
+        {cardContent} 
       </Link>
     );
   }

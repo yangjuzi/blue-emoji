@@ -17,12 +17,20 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
   const [emoji, setEmoji] = useState<EmojiData | null>(null);
   const [showMessage, setShowMessage] = useState(false);
 
+  // 关键修改 1: 使用 router.isReady 确保路由参数已加载
   useEffect(() => {
-    if (slug && emojiData.emojis) {
+    // 只有当路由参数准备就绪 (router.isReady) 且 slug 存在时才进行查找
+    if (router.isReady && slug && emojiData.emojis && !Array.isArray(slug)) {
+      console.log('--- Debugging Detail Page ---');
+      console.log('1. Current Slug (URL Parameter):', slug);
+
+      // 尝试查找 (使用您的 e.id === slug 逻辑)
       const foundEmoji = emojiData.emojis.find((e: EmojiData) => e.id === slug);
+      
       setEmoji(foundEmoji || null);
+      console.log('3. Emoji Found Status:', !!foundEmoji);
     }
-  }, [slug]);
+  }, [router.isReady, slug]); // 依赖项中添加 router.isReady
 
   const showMessageNotification = (text: string, type: 'success' | 'error' | 'info' = 'success') => {
     setShowMessage(true);
@@ -46,16 +54,26 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
     }
   };
 
+  // 关键修改 2: 在路由参数未就绪时，显示明确的加载状态
+  if (!router.isReady) {
+    return (
+      <Layout title="Loading...">
+        <div className="text-center py-12 text-gray-500">
+          <i className="fas fa-spinner fa-spin mr-2"></i> Loading Emoji Details...
+        </div>
+      </Layout>
+    );
+  }
+
+  // slug 存在，但数据查找结果为 null (找不到)
   if (!emoji) {
     return (
       <Layout title="Emoji Not Found">
         <div className="text-center py-12">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Emoji Not Found</h1>
-          <p className="text-gray-600 mb-8">Sorry, we couldn&apos;t find the emoji you&apos;re looking for.</p>
-          <Link href="/" passHref>
-            <a className="text-blue-600 hover:text-blue-700 font-semibold">
+          <p className="text-gray-600 mb-8">Sorry, we couldn&apos;t find the emoji you&apos;re looking for: {slug}</p>
+          <Link href="/" className="text-blue-600 hover:text-blue-700 font-semibold">
             ← Back to Home
-            </a>
           </Link>
         </div>
       </Layout>
@@ -75,9 +93,10 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
       <Layout title={`${emoji.name} - Blue Emoji`}>
         {/* Breadcrumbs */}
         <nav className="text-sm font-medium text-gray-500 mb-6">
-          <Link href="/" passHref>
- <a className="hover:text-blue-600">Home</a>
-</Link>
+          <Link href="/" className="hover:text-blue-600">
+            Home
+          </Link>
+          <span className="mx-1">/</span> {/* 使用 span 替换 / 以防止误解 */}
           <a href={`/category/${emoji.category}`} className="hover:text-blue-600"> {emoji.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</a> /
           <span className="text-gray-900">{emoji.name}</span>
         </nav>
@@ -185,10 +204,10 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
 
           {/* Giscus Comments */}
           <Giscus
-            repo="your-org/blue-emoji"  // Replace with actual repo
-            repoId="your-repo-id"       // Replace with actual repo ID
+            repo="your-org/blue-emoji"  // Replace with actual repo
+            repoId="your-repo-id"       // Replace with actual repo ID
             category="Emoji Comments"
-            categoryId="your-category-id"  // Replace with actual category ID
+            categoryId="your-category-id"  // Replace with actual category ID
             mapping="specific"
             term={emoji.id}
             theme="preferred_color_scheme"
