@@ -9,6 +9,7 @@ import Giscus from '@giscus/react';
 import { EmojiData } from '../../types';
 import emojiData from '../../data/list.json';
 
+
 interface EmojiDetailPageProps { }
 
 const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
@@ -87,7 +88,7 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
         <meta name="description" content={emoji.description || `Learn more about the ${emoji.name} emoji (${emoji.unicode})`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={emoji.pngPath} type="image/png" sizes="64x64" />
-        
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
       </Head>
 
@@ -214,7 +215,7 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
             category="General"
             categoryId="DIC_kwDOQhFI6s4CztL7"  // Replace with actual category ID
             mapping="pathname"
-            term={emoji.id}
+            term={router.asPath.split('?')[0]}
             theme="preferred_color_scheme"
             reactionsEnabled="1"
             emitMetadata="0"
