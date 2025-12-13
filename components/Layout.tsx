@@ -19,6 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Blue Emoji', descrip
     <div className="min-h-screen bg-gray-50 text-gray-800 font-inter">
       {/* Navigation Bar */}
       <header className="shadow-md bg-white sticky top-0 z-10">
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <Link href="/" className="text-3xl font-black text-blue-600 tracking-tight">
             BLUE EMOJI

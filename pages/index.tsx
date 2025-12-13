@@ -28,10 +28,13 @@ const HomePage: React.FC<HomePageProps> = () => {
   return (
     <>
       <Head>
-        <title>Blue-Emoji.com - Explore Blue Emojis</title>
+        <title>Blue-Emoji.com - Explore Blue Emojis,smileys emotion blue emoji</title>
         <meta name="description" content="The definitive library of open-source emojis, colored for calm, loyalty, and serenity." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         {/* Font Awesome */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />

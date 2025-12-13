@@ -87,7 +87,7 @@ const EmojiDetailPage: React.FC<EmojiDetailPageProps> = () => {
         <title> {emoji.name} Details | blue-emoji.com</title>
         <meta name="description" content={emoji.description || `Learn more about the ${emoji.name} emoji (${emoji.unicode})`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href={emoji.pngPath} type="image/png" sizes="64x64" />
+        <link rel="icon" href={emoji.svgPath} type="image/png" sizes="64x64" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
       </Head>
