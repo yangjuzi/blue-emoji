@@ -32,20 +32,22 @@ function convertToBlue(svgContent) {
   return svgContent
     // 核心黄色和浅色
     .replace(/#fcea2b/gi, "#3B82F6") // 核心面部黄色
-    .replace(/#FFD83D/gi, "#3B82F6") // 典型黄色
-    .replace(/#FFDD00/gi, "#3B82F6") // OpenMoji 标准黄色
-    .replace(/#FFC900/gi, "#3B82F6") // 另一种面部主体黄
-    .replace(/#f4aa41/gi, "#60A5FA") // 亮黄色/高光 -> 浅蓝色
+    .replace(/#ea5a47/gi, "#3B82F6") // 典型黄色
+    .replace(/#92d3f5/gi, "#3B82F6") // OpenMoji 标准黄色,天空蓝替换为蓝色
+    .replace(/#b1cc33/gi, "#3B82F6") // 另一种面部主体黄
+    .replace(/#f4aa41/gi, "#3B82F6") // 亮黄色/高光 -> 浅蓝色
     .replace(/#e27022/gi, "#3B82F6") // 另一种高亮/浅黄 -> 浅蓝色
 
     // 深黄色和阴影
-    .replace(/#FFCC4D/gi, "#2563EB") // 深黄色 -> 深蓝色
-    .replace(/#FEE433/gi, "#1D4ED8") // 备份黄色 -> 更深的蓝色
-    .replace(/#FADB00/gi, "#2563EB") // 中度阴影黄 -> 深蓝色
-    .replace(/#FFB400/gi, "#1D4ED8") // 深橙黄/阴影 -> 更深的蓝色
+    
+    .replace(/#a57939/gi, "#3B82F6") // 备份黄色 -> 更深的蓝色
+    .replace(/#ffa7c0/gi, "#3B82F6") // 中度阴影黄 -> 深蓝色
+    .replace(/#d22f27/gi, "#3B82F6") // 深橙黄/阴影 -> 更深的蓝色
 
     // 最深阴影和棕色轮廓
-    .replace(/#D99900/gi, "#1E3A8A") // 最深的棕/橙阴影 -> 深蓝阴影
+    .replace(/#b399c8/gi, "#3B82F6") // 最深的棕/橙阴影 -> 深蓝阴影
+    .replace(/#d0cfce/gi, "#3B82F6") // 最深的棕/橙阴影 -> 深蓝阴影
+    .replace(/#e67a94/gi, "#83CBE5") // 最深的棕/橙阴影 -> 深蓝阴影
 
     // 黑色线条替换
     .replace(/#000000/gi, "#1A202C") // 替换纯黑线条为极深蓝灰
