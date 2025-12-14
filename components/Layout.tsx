@@ -34,12 +34,12 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Blue Emoji', descrip
               HOME
             </Link>
 
-            {/* CATEGORY Dropdown */}
+            {/* CATEGORY Dropdown */}{/*
             <div className="relative group">
               <button className="text-gray-600 hover:text-blue-600 transition flex items-center py-2">
                 Category <i className="fas fa-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
-              </button>
-              {/* Dropdown Menu */}
+              </button>*/}
+              {/* Dropdown Menu */}{/*
               <div className="absolute hidden group-hover:block top-full left-1/2 -translate-x-1/2 mt-0 w-48 bg-white rounded-xl shadow-2xl z-20 overflow-hidden ring-1 ring-blue-100 transform origin-top transition duration-200">
                 <Link href="/category/smileys-emotion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Smileys Emotion</Link>
                 <Link href="/category/people" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">People</Link>
@@ -55,7 +55,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Blue Emoji', descrip
                 <Link href="/category/all" className="block px-4 py-2 bg-gray-50 text-blue-600 hover:bg-blue-100 transition font-semibold">View All Categories...</Link>
               </div>
             </div>
-
+                */}
             {/* DOWNLOAD */}
             <Link
               href="/download"

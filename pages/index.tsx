@@ -6,7 +6,7 @@ import Search from '../components/Search';
 import { EmojiData } from '../types';
 import emojiData from '../data/list.json';
 
-interface HomePageProps {}
+interface HomePageProps { }
 
 const HomePage: React.FC<HomePageProps> = () => {
   const [searchResults, setSearchResults] = useState<EmojiData[]>(emojiData.emojis);
@@ -24,6 +24,16 @@ const HomePage: React.FC<HomePageProps> = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // 定义 6 个固定的 emoji 链接
+  const fixedEmojiLinks = [
+    // 假设您想链接到这些 emoji 的详情页 (请根据您实际的 emoji ID/slug 修改 id)
+    { name: 'Grinning Face', id: 'grinning-face' },
+    { name: 'Tears of Joy', id: 'face-with-tears-of-joy' },
+    { name: 'Heart with Arrow', id: 'heart-with-arrow' },
+    { name: 'Star Struck', id: 'star-struck' },
+    { name: 'Kiss Mark', id: 'kiss-mark' },
+    { name: 'Two Hearts', id: 'two-hearts' },
+  ];
 
   return (
     <>
@@ -31,7 +41,7 @@ const HomePage: React.FC<HomePageProps> = () => {
         <title>Blue-Emoji.com - Explore Blue Emojis,smileys emotion blue emoji</title>
         <meta name="description" content="The definitive library of open-source emojis, colored for calm, loyalty, and serenity." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -67,7 +77,7 @@ const HomePage: React.FC<HomePageProps> = () => {
           />
         </div>
 
-        {/* Quick Categories Links */}
+        {/* Quick Categories Links */}{/*注释首页搜索框下的类别快速跳转
         <section className="mb-12 border-b border-gray-200 pb-6">
           <h2 className="sr-only">Quick Categories</h2>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4">
@@ -78,6 +88,22 @@ const HomePage: React.FC<HomePageProps> = () => {
                 className="category-link"
               >
                 {category.name}
+              </a>
+            ))}
+          </div>
+        </section>
+          */}
+        {/* 🎯 替换后的固定 Emoji 详情链接 (原 Quick Categories Links) 🎯 */}
+        <section className="mb-12 border-b border-gray-200 pb-6">
+          <h2 className="sr-only">Quick Emoji Details Links</h2>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4">
+            {fixedEmojiLinks.map((emoji) => (
+              <a
+                key={emoji.id}
+                href={`/emoji/${emoji.id}`} // *** 路径修改为 /emoji/id ***
+                className="category-link" // 保持原有样式，让它看起来像按钮
+              >
+                {emoji.name}
               </a>
             ))}
           </div>
@@ -96,7 +122,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                 <EmojiCard
                   key={emoji.id}
                   emoji={emoji}
-                  //onClick={handleEmojiClick}
+                //onClick={handleEmojiClick}
                 />
               ))}
             </div>
