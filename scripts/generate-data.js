@@ -7,6 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const VERSION = "v1";
 
 const config = {
   openmojiDataPath: './temp-openmoji/openmoji.json',
@@ -119,9 +120,9 @@ function processOpenMojiData(openmojiData) {
       ],
       description: generateDescription(emoji.annotation),
       // 路径保持不变，使用新的子目录
-      svgPath: `/emojis/blue-svg-smileys/${emoji.hexcode}.svg`,
+      svgPath: `/emojis/blue-svg-smileys/${emoji.hexcode}-blue-${VERSION}.svg`,
       // 如果您也修改了 PNG 目录，这里也要对应修改
-      pngPath: `/emojis/blue-png-smileys/${emoji.hexcode}-64.png`
+      pngPath: `/emojis/blue-png-smileys/${emoji.hexcode}-blue-${VERSION}-256.png`
     };
   }));
 

@@ -8,6 +8,7 @@ const fs = require("fs");
 const path = require("path");
 // 假设您已经安装并使用了 decompress
 const decompress = require("decompress");
+const VERSION = "v1"; // ⭐ 每次颜色或算法变更，改这里即可
 
 // --- 配置常量 ---
 const TEMP_ZIP = "./temp-openmoji.zip";
@@ -148,9 +149,12 @@ async function run() {
       // 4. 颜色转换和保存
       const svg = fs.readFileSync(svgPath, "utf8");
       const blueSVG = convertToBlue(svg);
+      //增加1行加版本号解决vercel的cdn缓存问题
+      const outName = `${id}-blue-${VERSION}.svg`;
 
       // 保存蓝色版本到 OUTPUT_DIR
-      fs.writeFileSync(path.join(OUTPUT_DIR, `${id}.svg`), blueSVG, "utf8");
+      fs.writeFileSync(path.join(OUTPUT_DIR, outName), blueSVG, "utf8");
+      //fs.writeFileSync(path.join(OUTPUT_DIR, `${id}.svg`), blueSVG, "utf8");
       processed++;
     }
 
