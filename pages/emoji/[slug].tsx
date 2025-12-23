@@ -7,6 +7,7 @@ import Giscus from '@giscus/react'
 import emojiData from '../../data/list.json'
 import { EmojiData } from '../../types'
 
+
 interface EmojiDetailPageProps {
   emoji: EmojiData
 }
@@ -68,6 +69,10 @@ export default function EmojiDetailPage({ emoji }: EmojiDetailPageProps) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="canonical"
+          href={`https://blue-emoji.com/emoji/${emoji.id}`}
+        />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"

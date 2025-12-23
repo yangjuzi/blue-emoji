@@ -10,6 +10,7 @@ const TermsPage: React.FC = () => {
         <meta name="description" content="Terms of Service and usage guidelines for BlueEmoji.com and our blue emoji collection." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://blue-emoji.com/terms" />
       </Head>
 
       <Layout title="Terms of Service" description="Terms of Service for BlueEmoji.com">

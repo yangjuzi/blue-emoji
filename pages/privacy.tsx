@@ -9,6 +9,7 @@ const PrivacyPage: React.FC = () => {
         <title>Privacy Policy | BlueEmoji.com</title>
         <meta name="description" content="Privacy Policy for BlueEmoji.com - How we collect, use, and protect your information." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://blue-emoji.com/privacy" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

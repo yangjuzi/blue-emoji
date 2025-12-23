@@ -10,6 +10,7 @@ const ContactPage: React.FC = () => {
         <meta name="description" content="Get in touch with the Blue Emoji team. We'd love to hear your feedback, suggestions, or questions about our blue emoji collection." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://blue-emoji.com/contact" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
       </Head>
 

@@ -11,6 +11,7 @@ const DownloadPage: React.FC = () => {
         <meta name="description" content="Download the complete Blue Emoji library with over 1,500 blue-themed SVG and PNG files. Perfect for designers and developers." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://blue-emoji.com/download" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
       </Head>
 

@@ -40,11 +40,6 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Category Index -->
-  <url>
-    <loc>https://blue-emoji.com/category</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  
 
 </urlset>

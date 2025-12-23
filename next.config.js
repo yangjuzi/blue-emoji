@@ -17,12 +17,17 @@ const nextConfig = {
         destination: '/emoji/:path',
         permanent: true,
       },
+       {
+        source: '/:path*/',
+        destination: '/:path*',
+        permanent: true,
+      },
     ];
   },
   
   output: 'export',
   images: { unoptimized: true },
-  trailingSlash: true,
+  trailingSlash: false,
   experimental: {
     outputFileTracingExcludes: {
       '*': [
