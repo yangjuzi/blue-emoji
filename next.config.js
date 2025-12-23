@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  trailingSlash: false,
   // 关键修改：添加 redirects 规则
   async redirects() {
     return [
@@ -14,7 +15,7 @@ const nextConfig = {
           },
         ],
         // 重定向到不带查询参数的干净路径
-        destination: '/emoji/:path',
+        destination: '/emoji/:path*',
         permanent: true,
       },
        {
@@ -27,7 +28,7 @@ const nextConfig = {
   
   output: 'export',
   images: { unoptimized: true },
-  trailingSlash: false,
+  
   experimental: {
     outputFileTracingExcludes: {
       '*': [
