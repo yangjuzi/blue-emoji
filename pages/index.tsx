@@ -101,7 +101,7 @@ const HomePage: React.FC<HomePageProps> = () => {
             {fixedEmojiLinks.map((emoji) => (
               <a
                 key={emoji.id}
-                href={`/emoji/${emoji.id}`} // *** 路径修改为 /emoji/id ***
+                href={`/emoji/${emoji.id}/`} // *** 路径修改为 /emoji/id ***
                 className="category-link" // 保持原有样式，让它看起来像按钮
               >
                 {emoji.name}

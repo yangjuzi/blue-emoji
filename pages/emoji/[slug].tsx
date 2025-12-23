@@ -71,7 +71,7 @@ export default function EmojiDetailPage({ emoji }: EmojiDetailPageProps) {
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="canonical"
-          href={`https://blue-emoji.com/emoji/${emoji.id}`}
+          href={`https://blue-emoji.com/emoji/${emoji.id}/`}
         />
         <link
           rel="stylesheet"

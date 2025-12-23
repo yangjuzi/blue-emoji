@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | blue-emoji.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <header class="shadow-sm bg-white sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-blue-600 tracking-tight">BlueEmoji.com</a>
+            
+            <nav class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">HOME</a>
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 transition flex items-center py-2">
+                        Category <i class="fas fa-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute hidden group-hover:block top-full left-1/2 -translate-x-1/2 mt-0 w-48 bg-white rounded-xl shadow-2xl z-20 overflow-hidden ring-1 ring-blue-100 transform origin-top transition duration-200">
+                        <!-- Note: Adjusted names to be more standard emoji categories -->
+                        <a href="category-people.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">People & Faces</a>
+                        <a href="category-animals.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Animals & Nature</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Gestures & Body</a>
+                        <a href="category-symbols.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Symbols & Flags</a>
+                        <div class="border-t border-gray-100"></div>
+                        <a href="#" class="block px-4 py-2 bg-gray-50 text-blue-600 hover:bg-blue-100 transition font-semibold">All Categories...</a>
+                    </div>
+                </div>
+                <a href="download.html" class="text-gray-600 hover:text-blue-600 transition">Download</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+            </nav>
+            <button class="md:hidden text-gray-600 hover:text-blue-600 p-2 rounded-lg">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 border-b pb-4">
+            Privacy Policy
+        </h1>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
+            <p class="text-sm text-gray-500 mb-6">Last updated: December 6, 2025</p>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 mb-3">1. Data Collection</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    BlueEmoji.com is primarily a static resource site. We do not require users to create an account or provide any personal identification information (PII) to browse or download assets.
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                    <li>
+                        <strong>Usage Data:</strong> We may collect non-personal usage data (e.g., pages visited, time spent on site, browser type) to help us analyze traffic and improve the website performance.
+                    </li>
+                    <li>
+                        <strong>Cookies:</strong> We use minimal cookies for basic site functionality and analytics (if implemented), but not for tracking individual users across other sites.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 mb-3">2. Data Security</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your non-personal usage data, we cannot guarantee its absolute security.
+                </p>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 mb-3">3. Links to Other Sites</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Our Service may contain links to other sites (e.g., OpenMoji, GitHub) that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.
+                </p>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer (Using the updated structure for consistency) -->
+    <footer class="bg-gray-800 text-white py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-wrap justify-center space-x-4 mb-3 text-sm font-medium">
+                <a href="about-us.html" class="hover:text-blue-400 transition">About Us</a>
+                <span class="text-gray-600">|</span>
+                <a href="contact-us.html" class="hover:text-blue-400 transition">Contact Us</a>
+                <span class="text-gray-600">|</span>
+                <a href="terms-of-service.html" class="hover:text-blue-400 transition">Terms of Service</a>
+                <span class="text-gray-600">|</span>
+                <a href="privacy-policy.html" class="hover:text-blue-400 transition">Privacy Policy</a>
+            </div>
+            <p class="text-xs text-gray-400">© 2025 BlueEmoji.com. | Based on OpenMoji and released under CC BY-SA 4.0.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
